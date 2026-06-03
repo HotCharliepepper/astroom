@@ -349,6 +349,25 @@ footer .fsig{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:
 footer .fs{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.85;}
 footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px solid var(--line-soft);font-size:11px;color:var(--muted);line-height:1.95;letter-spacing:.01em;}
 
+/* benefit card (3개월 이상 통합 운영 혜택) + tier perk line */
+.bonus{border-radius:20px;border:1px solid var(--gold);background:linear-gradient(165deg,#FCF4E3,#F7EDD9);
+  padding:28px 24px;box-shadow:0 44px 80px -46px var(--gold-glow);}
+.bonus .bk{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+.bonus .bh{font-family:"Noto Serif KR";font-size:21px;color:var(--ink);margin-top:12px;line-height:1.45;word-break:keep-all;}
+.bonus .bd{font-size:13.5px;color:var(--ink-soft);margin-top:14px;line-height:1.8;}
+.bonus ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px;}
+.bonus li{font-size:13px;color:var(--ink-soft);padding-left:20px;position:relative;line-height:1.55;}
+.bonus li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:50%;background:var(--gold);}
+.bonus__val{margin-top:20px;border-top:1px solid var(--line-soft);padding-top:18px;display:flex;flex-direction:column;gap:11px;}
+.bv__line{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:13.5px;color:var(--ink-soft);}
+.bv__line b{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:600;letter-spacing:-.01em;color:var(--ink);}
+.bv__line .strike{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--rose-deep);text-decoration-thickness:1px;}
+.bv__free b{color:var(--gold-deep);}
+.bonus__note{margin-top:14px;font-size:11.5px;color:var(--muted);line-height:1.6;}
+.perk{margin-top:13px;font-size:12.5px;color:var(--gold-deep);font-weight:600;line-height:1.5;
+  background:linear-gradient(100deg,rgba(176,134,60,.12),rgba(200,167,101,.07));border:1px solid var(--gold);border-radius:11px;padding:10px 13px;}
+.tier.rec .perk{border-color:var(--gold-deep);}
+
 /* ===== 손님 화면 동선 퍼널 (interactive, light) ===== */
 .funnel{margin-top:32px;display:flex;flex-direction:column;align-items:center;text-align:center;}
 .funnel__lead{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:18px;max-width:30em;}
@@ -796,7 +815,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
       </div>
       <div class="dcard">
         <div class="dnum" data-to="134">0<span class="u">만</span></div>
-        <div class="dlb">연간 외국인 방문 · 주민의 2배</div>
+        <div class="dlb">외국인 방문 수요 · 장기 확장 가능성</div>
         <div class="dsrc">한국관광데이터랩 · 2025</div>
       </div>
       <div class="dcard">
@@ -806,7 +825,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
       </div>
       <div class="dcard">
         <div class="dnum" data-to="47.9" data-dec="1">0<span class="u">%</span></div>
-        <div class="dlb">구글 검색 점유율 · 네이버 첫 추월</div>
+        <div class="dlb">전체 기기 기준 구글 검색 점유율</div>
         <div class="dsrc">StatCounter 전체 기기 · 2025.12</div>
       </div>
       <div class="dcard wide">
@@ -818,6 +837,10 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
         </div>
       </div>
     </div>
+    <p class="note r d3" style="margin-top:22px;">
+      모바일에서는 여전히 네이버가 강합니다. 핵심은 네이버를 부정하는 것이 아니라,
+      <span class="gold">네이버 발견 이후 구글과 AI에서 재확인되는 화면까지 함께 잡는 것</span>입니다.
+    </p>
     <p class="pricenote r d3">＊ 출처 — 행정안전부 주민등록인구(2026.5) · 한국관광데이터랩(2025) · 와이즈앱·리테일, 오픈서베이(2025) · StatCounter(2025.12).</p>
   </div>
 </section>
@@ -939,8 +962,8 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
       <div class="tier r d1">
         <div class="tg">A · 기존 업체 유지형 / 비교안</div>
         <div class="tn">기존 업체 유지 + Weplace 회수 구조</div>
-        <div class="price"><span class="amt">240</span><span class="per">만 원 / 지점 · 월</span><span class="vat">+ VAT</span></div>
-        <div class="pay">2지점 합산 월 480 · 기존 네이버 상위노출 300(기존 업체) + Weplace 검색전환 OS 180</div>
+        <div class="price"><span class="amt">480</span><span class="per">만 원 · 2지점 합산</span><span class="vat">+ VAT</span></div>
+        <div class="pay">지점당 환산 월 240만 원 · 기존 네이버 상위노출 300(기존 업체) + Weplace 검색전환 OS 180</div>
         <div class="desc">
           기존 업체를 유지할 경우의 비교안입니다. 네이버는 기존 업체가 운영하고, Weplace는 구글·홈페이지·AI검색만 보완합니다.
         </div>
@@ -958,12 +981,13 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
         <div class="badge">추천</div>
         <div class="tg">B · Weplace 2지점 통합 운영형</div>
         <div class="tn">Weplace 2지점 통합 검색전환 OS</div>
-        <div class="price"><span class="was">지점당 250</span><span class="amt">225</span><span class="per">만 원 / 지점 · 월</span><span class="vat">+ VAT</span></div>
-        <div class="pay">2지점 합산 월 450 · 발견 운영 300 + 검색전환 OS 200 − 2지점 통합 리워드 50</div>
+        <div class="price"><span class="amt">450</span><span class="per">만 원 · 2지점 통합</span><span class="vat">+ VAT</span></div>
+        <div class="pay">지점당 환산 월 225만 원 · 발견 운영 300 + 검색전환 OS 200 − 2지점 통합 리워드 50</div>
         <div class="desc">
           네이버 상위노출 운영부터 구글·홈페이지·AI검색·예약 전환까지 한 곳에서 관리합니다.
           기존에는 네이버에 월 300을 쓰고도 그 뒤가 따로 움직였지만, 이제는 <b style="color:var(--gold-deep)">지점당 월 225(2지점 450)로 발견부터 예약까지 한 창구</b>입니다.
         </div>
+        <div class="perk">3개월 이상 진행 시 · 2지점 홈페이지 초기 구축비 300만 원 상당 포함</div>
         <ul>
           <li>네이버 상위노출 운영·최적화</li>
           <li>구글 비즈니스 프로필 정비</li>
@@ -982,9 +1006,10 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
       <div class="tier r d3">
         <div class="tg">C · 상위 앵커</div>
         <div class="tn">아스트룸 레이어드 브랜드 성장형</div>
-        <div class="price"><span class="amt">300</span><span class="per">만 원 / 지점 · 월</span><span class="vat">+ VAT</span></div>
-        <div class="pay">2지점 합산 월 600 · 1년 운영</div>
+        <div class="price"><span class="amt">600</span><span class="per">만 원 · 2지점 합산</span><span class="vat">+ VAT</span></div>
+        <div class="pay">지점당 환산 월 300만 원 · 1년 운영</div>
         <div class="desc">B안 전체에 스타일북·디자이너 포트폴리오·숏폼·SNS·채용 브랜딩까지 더한, 레이어드 브랜드 성장 운영안입니다.</div>
+        <div class="perk">2지점 홈페이지 초기 구축비 포함 + 스타일북/포트폴리오 확장 가능</div>
         <ul>
           <li class="inc">B안 전체 포함</li>
           <li>스타일북 / 레이어드 사례 아카이브</li>
@@ -998,10 +1023,40 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
     </div>
 
     <p class="pricenote r">
-      ＊ 지점당으로 보면 기존 업체 유지(A) 월 240, 한 곳으로 묶는 통합 운영(B) 월 225 — 묶는 쪽이 지점당 더 적습니다.
+      ＊ 2지점 합산으로 기존 업체 유지(A)는 월 480, 한 곳으로 묶는 통합 운영(B)은 월 450 — 묶는 쪽이 더 적습니다.
+      네이버 상위노출 운영은 기존 월 300만 원 수준의 집행 범위를 기준으로 설계했으며, 실제 광고비·체험단·블로그·리뷰 실행 구성은 기존 업체 내역 확인 후 최종 확정합니다.
       네이버는 ‘상위노출 운영·최적화·관리’로 진행하며 노출을 보장하지 않고, AI 검색 역시 AI·구글이 읽을 근거를 갖추는 작업입니다.
       모든 금액은 VAT 별도이며, 분기 결제를 원하실 경우 분기 운영비와 페이지 제작비를 분리해 다시 안내드립니다.
     </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 10.4 3개월 이상 통합 운영 혜택 ===================== -->
+<section class="anchor" style="padding-top:10px;">
+  <div class="wrap">
+    <div class="bonus r">
+      <div class="bk">3개월 이상 통합 운영 혜택</div>
+      <div class="bh">2지점 홈페이지 초기 구축비<br>300만 원 상당을 별도 청구하지 않습니다.</div>
+      <div class="bd">
+        Weplace 2지점 통합 운영형(B안) 또는 브랜드 성장형(C안)으로 3개월 이상 진행하실 경우,
+        아스트룸 브랜드 허브 페이지와 송파위례점·문정점 지점별 페이지의 <span class="gold">초기 구축비를 별도로 청구하지 않습니다.</span>
+        네이버 예약을 대체하려는 홈페이지가 아니라, 네이버·구글·AI검색이 함께 참고할 수 있는 공식 기준점을 먼저 세우기 위한 구성입니다.
+      </div>
+      <ul>
+        <li>아스트룸 브랜드 허브 페이지</li>
+        <li>송파위례점 지점 페이지</li>
+        <li>문정점 지점 페이지</li>
+        <li>네이버·구글·AI검색이 참고할 공식 기준점 구성</li>
+        <li>레이어드 전문성 · 1:1 상담 · 시술기록관리 · 프리미엄 약제 정보 구조화</li>
+      </ul>
+      <div class="bonus__val">
+        <div class="bv__line"><span>2지점 홈페이지 초기 구축비</span><b class="strike">300만 원</b></div>
+        <div class="bv__line bv__free"><span>3개월 이상 통합 운영 시</span><b>포함 · 0원</b></div>
+      </div>
+      <p class="bonus__note">＊ A안(기존 업체 유지형)에는 적용되지 않으며, B안·C안으로 3개월 이상 진행하실 때 적용됩니다. 초기 구축비를 면제(포함)하는 것으로, 별도 청구가 없다는 의미입니다.</p>
+    </div>
   </div>
 </section>
 
