@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="아스트룸헤어 송파위례점·문정점 2지점 통합 검색전환 제안 — 네이버 발견 운영부터 구글·홈페이지·AI검색까지, 발견부터 예약까지 한 곳에서. Weplace." />
+<title>아스트룸헤어 송파위례점·문정점 — 2지점 통합 검색전환 제안 | Weplace</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+<style>
+:root{
+  --paper:#F7F1E7;        /* warm ivory */
+  --paper-2:#F1E8D9;      /* soft beige */
+  --paper-3:#EBE0CE;      /* deeper beige */
+  --panel:#FCFAF4;        /* warm white card */
+  --panel-2:#F6EFE2;
+  --ink:#3A2C20;          /* deep brown */
+  --ink-2:#4E3D2D;
+  --ink-soft:#6E5C49;     /* muted brown */
+  --muted:#9A8B77;        /* ash-warm */
+  --muted-2:#B3A78F;
+  --muted-3:#C2B6A2;
+  --line:rgba(58,44,32,.13);
+  --line-soft:rgba(58,44,32,.07);
+  --gold:#B0863C;         /* champagne gold (readable) */
+  --gold-deep:#977026;
+  --gold-soft:#C8A765;    /* decorative gold */
+  --gold-glow:rgba(176,134,60,.22);
+  --rose:#BE8385;         /* muted rose */
+  --rose-deep:#A86B6D;
+  --rose-bg:rgba(190,131,133,.10);
+  --maxw:600px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  /* image slots (graceful: fall back to paper if missing) */
+  --img-hero:url("hero.jpg");
+  --band-style:url("layered-style.jpg");
+  --band-cta:url("cta.jpg");
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:"Pretendard",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.78;
+  letter-spacing:-.01em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ambient warmth + faint grain */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(1100px 720px at 88% -6%, rgba(200,167,101,.18), transparent 58%),
+    radial-gradient(900px 620px at 2% 32%, rgba(190,131,133,.08), transparent 55%),
+    radial-gradient(1000px 820px at 100% 102%, rgba(200,167,101,.10), transparent 60%);
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.wrap{position:relative;z-index:1;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+section{position:relative;z-index:1;}
+
+/* type */
+.serif{font-family:"Noto Serif KR",serif;}
+.eng{font-family:"Cormorant Garamond",serif;}
+.eyebrow{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:15.5px;letter-spacing:.01em;color:var(--gold-deep);margin-bottom:7px;}
+.kicker{
+  font-size:10.5px;letter-spacing:.36em;text-transform:uppercase;
+  color:var(--gold);font-weight:700;margin-bottom:20px;
+  display:flex;align-items:center;gap:11px;
+}
+.kicker::before{content:"";width:24px;height:1px;background:var(--gold);opacity:.6;}
+
+h1,h2,h3{font-family:"Noto Serif KR",serif;font-weight:500;letter-spacing:-.022em;line-height:1.36;color:var(--ink);word-break:keep-all;text-wrap:balance;}
+.gold{color:var(--gold);}
+.rose{color:var(--rose-deep);}
+b{font-weight:600;color:var(--ink);}
+
+/* reveal */
+.r{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease);}
+.r.in{opacity:1;transform:none;}
+.r.d1{transition-delay:.08s}.r.d2{transition-delay:.16s}.r.d3{transition-delay:.24s}.r.d4{transition-delay:.32s}.r.d5{transition-delay:.4s}
+
+/* photo placeholder (graceful) */
+.ph{position:relative;border-radius:18px;overflow:hidden;background:
+    radial-gradient(120% 120% at 30% 20%, rgba(255,255,255,.5), transparent 55%),
+    linear-gradient(155deg,var(--paper-3),var(--panel-2));
+  border:1px solid var(--line-soft);box-shadow:0 24px 50px -34px rgba(58,44,32,.28);}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;z-index:2;}
+.ph .ghost{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;
+  font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;letter-spacing:.04em;color:var(--muted-3);}
+.ph .ghost::after{content:"";position:absolute;left:50%;top:50%;width:50px;height:1px;background:var(--muted-3);transform:translate(-50%,18px);opacity:.55;}
+.ph .ptag{position:absolute;left:14px;bottom:13px;z-index:3;background:rgba(252,250,244,.86);backdrop-filter:blur(4px);
+  border:1px solid var(--line-soft);border-radius:20px;padding:5px 13px;font-size:11px;letter-spacing:.1em;color:var(--ink-soft);font-weight:600;}
+
+/* ===== PHOTO HERO (image-first, light) ===== */
+.photo-hero{position:relative;background-color:var(--paper);
+  background-image:
+    linear-gradient(180deg, rgba(247,241,231,.10) 0%, rgba(247,241,231,0) 24%, rgba(247,241,231,.62) 74%, var(--paper) 100%),
+    var(--img-hero);
+  background-size:cover;background-position:center;background-repeat:no-repeat;}
+.photo-hero .wrap{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:30px;padding-bottom:48px;}
+.hero-top{display:flex;}
+.brandline{align-self:flex-start;font-size:10.5px;letter-spacing:.38em;color:var(--gold-deep);text-transform:uppercase;font-weight:700;
+  display:inline-flex;align-items:center;gap:9px;background:rgba(252,250,244,.85);backdrop-filter:blur(6px);
+  border:1px solid var(--line-soft);padding:9px 15px;border-radius:24px;box-shadow:0 12px 28px -18px rgba(58,44,32,.32);}
+.brandline .x{color:var(--rose-deep);font-size:12px;}
+.hero h1{font-size:31px;line-height:1.42;font-weight:500;text-shadow:0 1px 22px rgba(247,241,231,.9);}
+.hero h1 .g{color:var(--gold-deep);}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold-glow);}
+.scrollcue{margin-top:26px;font-size:10px;letter-spacing:.3em;color:var(--ink-soft);text-transform:uppercase;display:flex;align-items:center;gap:10px;}
+.scrollcue .ln{width:1px;height:30px;background:linear-gradient(var(--gold-deep),transparent);}
+
+/* intro slot (distributed header text) */
+.intro .introlead{font-size:17px;line-height:1.85;color:var(--ink);font-weight:400;}
+.intro .introsub{margin-top:18px;font-size:13.8px;line-height:1.9;color:var(--ink-soft);}
+
+/* full-bleed photo bands */
+.band{position:relative;min-height:42svh;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:64px 30px;overflow:hidden;background-color:var(--paper-2);}
+.band::before{content:"";position:absolute;inset:0;background:var(--band-src) center/cover no-repeat;}
+.band::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, var(--paper) 0%, rgba(247,241,231,.48) 26%, rgba(247,241,231,.48) 74%, var(--paper) 100%);}
+.band .bq{position:relative;z-index:2;max-width:470px;font-family:"Noto Serif KR";font-weight:500;
+  font-size:23px;line-height:1.56;color:var(--ink);text-shadow:0 1px 18px rgba(247,241,231,.92);word-break:keep-all;text-wrap:balance;}
+.band .bq .g{color:var(--gold-deep);}
+.band .bq .sm{display:block;margin-top:13px;font-family:"Pretendard";font-size:13.5px;font-weight:400;color:var(--ink-soft);letter-spacing:0;text-shadow:none;}
+.band-style{--band-src:var(--band-style);}
+.band-cta{--band-src:var(--band-cta);}
+
+/* dividers */
+.hr{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:0 auto;max-width:var(--maxw);}
+.gap-s{height:46px}
+
+/* section base */
+.anchor{padding:88px 0;}
+.anchor h2{font-size:27px;font-weight:500;line-height:1.46;}
+.anchor h2 .soft{color:var(--muted);font-weight:300;}
+.anchor .note{margin-top:26px;font-size:14.5px;color:var(--ink-soft);font-weight:400;line-height:1.9;}
+.anchor .note + .note{margin-top:16px;}
+
+/* cards */
+.card{background:linear-gradient(160deg,var(--panel),var(--panel-2));border:1px solid var(--line-soft);
+  border-radius:18px;padding:26px 24px;box-shadow:0 20px 44px -32px rgba(58,44,32,.25);}
+.card .lead{font-size:16px;line-height:1.8;color:var(--ink);font-weight:400;}
+.card .small{font-size:13.5px;color:var(--ink-soft);line-height:1.8;margin-top:14px;font-weight:400;}
+
+/* big pull statement */
+.pull{font-family:"Noto Serif KR",serif;font-size:22px;line-height:1.6;font-weight:500;color:var(--ink);}
+.pull .g{color:var(--gold);}
+.pullbox{border-left:3px solid var(--gold);padding:8px 0 8px 22px;}
+
+/* stat cards (count-up) */
+.data{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.dcard{background:linear-gradient(160deg,var(--panel),var(--panel-2));border:1px solid var(--line-soft);
+  border-radius:16px;padding:22px 18px;box-shadow:0 16px 36px -30px rgba(58,44,32,.22);}
+.dcard.wide{grid-column:1 / -1;display:flex;align-items:center;gap:16px;}
+.dnum{font-family:"Cormorant Garamond",serif;font-size:38px;font-weight:600;color:var(--gold);line-height:1;letter-spacing:-.01em;}
+.dnum .u{font-size:18px;color:var(--gold-deep);margin-left:2px;font-weight:500;}
+.dlb{font-size:12px;color:var(--ink-soft);margin-top:10px;font-weight:600;}
+.dsrc{font-size:10.5px;color:var(--muted);margin-top:4px;}
+.dcard.wide .wi{flex:none;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:var(--rose-bg);}
+.dcard.wide .wi svg{width:22px;height:22px;stroke:var(--rose-deep);fill:none;stroke-width:1.5;}
+.dcard.wide .wt{font-family:"Noto Serif KR";font-size:14.5px;color:var(--ink);line-height:1.55;}
+.dcard.wide .wt span{color:var(--muted);font-size:12.5px;display:block;margin-top:3px;}
+
+/* ===== customer questions ===== */
+.qcol{display:flex;flex-direction:column;gap:13px;}
+.qline{border-left:2px solid var(--rose);padding:8px 0 8px 18px;
+  font-family:"Noto Serif KR",serif;font-size:17px;color:var(--ink);font-weight:400;line-height:1.5;}
+.qline span{display:block;font-family:"Pretendard";font-size:12px;color:var(--muted);font-weight:500;margin-top:4px;letter-spacing:0;}
+
+/* evidence trio */
+.trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px;}
+.trio .ph{aspect-ratio:3/4;border-radius:14px;}
+.trio .tcap{font-size:11.5px;color:var(--ink-soft);font-weight:600;text-align:center;margin-top:9px;letter-spacing:.02em;}
+
+/* ===== two locations ===== */
+.duo{display:grid;grid-template-columns:1fr;gap:16px;}
+.loc{border-radius:18px;border:1px solid var(--line-soft);overflow:hidden;background:linear-gradient(165deg,var(--panel),var(--panel-2));
+  box-shadow:0 26px 56px -38px rgba(58,44,32,.3);}
+.loc .ph{border-radius:0;border:none;box-shadow:none;aspect-ratio:16/10;}
+.loc .lc{padding:22px 22px 26px;}
+.loc .lk{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:7px;}
+.loc .lk::before{content:"";width:18px;height:2px;border-radius:2px;}
+.loc.wirye .lk{color:var(--gold);} .loc.wirye .lk::before{background:var(--gold);}
+.loc.munjeong .lk{color:var(--rose-deep);} .loc.munjeong .lk::before{background:var(--rose);}
+.loc .lh{font-family:"Noto Serif KR";font-size:18px;color:var(--ink);margin-top:10px;line-height:1.45;}
+.loc ul{list-style:none;margin-top:15px;display:flex;flex-direction:column;gap:9px;}
+.loc li{font-size:13.5px;color:var(--ink-soft);padding-left:19px;position:relative;line-height:1.6;}
+.loc li::before{content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;}
+.loc.wirye li::before{background:var(--gold);} .loc.munjeong li::before{background:var(--rose);}
+
+/* brand umbrella */
+.umbrella{margin-top:18px;border:1px dashed var(--line);border-radius:16px;padding:22px;text-align:center;background:rgba(252,250,244,.5);}
+.umbrella .uk{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;}
+.chips span{font-family:"Noto Serif KR";font-size:14px;color:var(--ink);background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:22px;padding:9px 17px;box-shadow:0 8px 20px -16px rgba(58,44,32,.3);}
+
+/* ===== flow ===== */
+.flow{display:flex;flex-direction:column;gap:0;margin-top:8px;}
+.fstep{display:flex;gap:18px;align-items:flex-start;padding:4px 0;}
+.frail{display:flex;flex-direction:column;align-items:center;min-width:42px;}
+.fnode{width:42px;height:42px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:var(--panel);border:1px solid var(--line);box-shadow:0 10px 22px -16px rgba(58,44,32,.35);}
+.fnode svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.5;}
+.fconn{width:1px;flex:1;min-height:26px;background:linear-gradient(var(--line),var(--line-soft));margin:6px 0;}
+.fbody{padding-bottom:24px;flex:1;}
+.fbody .lb{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+.fbody .ti{font-family:"Noto Serif KR";font-size:16px;color:var(--ink);margin-top:4px;}
+.fbody .de{font-size:13px;color:var(--ink-soft);margin-top:4px;line-height:1.65;}
+.fstep.last .fnode{background:linear-gradient(150deg,var(--gold),var(--gold-deep));border-color:var(--gold);}
+.fstep.last .fnode svg{stroke:#fff;}
+.fwords{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+.fwords span{font-family:"Noto Serif KR";font-size:13.5px;color:var(--gold-deep);background:var(--rose-bg);
+  border:1px solid var(--line-soft);border-radius:10px;padding:8px 14px;}
+
+/* ===== AI mock ===== */
+.aiq{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
+.aiq .ql{border-left:2px solid var(--gold);padding:5px 0 5px 16px;font-family:"Noto Serif KR";font-size:14.5px;color:var(--ink);font-style:italic;}
+.aimock{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px 16px 20px;
+  box-shadow:0 40px 70px -42px rgba(58,44,32,.4);}
+.aibar{display:flex;align-items:center;gap:8px;padding:2px 4px 14px;border-bottom:1px solid var(--line-soft);}
+.aibar .dotr{width:9px;height:9px;border-radius:50%;}
+.r1{background:#D8B27E}.r2{background:#CFA0A1}.r3{background:#C9BCA6}
+.aibar .ttl{margin-left:8px;font-size:10.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;}
+.uq{margin:16px 2px 18px;display:flex;justify-content:flex-end;}
+.uq .b{background:var(--paper-2);border:1px solid var(--line-soft);color:var(--ink);font-size:13.5px;padding:11px 15px;border-radius:14px 14px 4px 14px;max-width:86%;}
+.ans{display:flex;gap:12px;align-items:flex-start;margin:0 2px;}
+.ans .avt{width:26px;height:26px;border-radius:50%;flex:none;background:radial-gradient(circle at 35% 30%,var(--gold-soft),var(--gold-deep));box-shadow:0 0 14px var(--gold-glow);}
+.ans .body{font-size:13.5px;color:var(--ink-soft);line-height:1.75;}
+.ans .body .h{color:var(--ink);font-weight:700;}
+.aireco{margin-top:12px;display:flex;flex-direction:column;gap:9px;}
+.airow{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:var(--ink-soft);}
+.airow .n{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);min-width:16px;font-size:16px;}
+.airow b{color:var(--ink);font-weight:700;}
+.cursor{display:inline-block;width:7px;height:15px;background:var(--gold);vertical-align:-2px;margin-left:3px;animation:blink 1.1s steps(1) infinite;}
+@keyframes blink{50%{opacity:0}}
+.mocknote{margin-top:15px;font-size:11px;color:var(--muted);letter-spacing:.01em;line-height:1.65;border-top:1px dashed var(--line-soft);padding-top:13px;}
+
+/* ===== roadmap ===== */
+.road{display:flex;flex-direction:column;margin-top:6px;}
+.rstep{display:flex;gap:16px;padding-bottom:6px;}
+.rrail{display:flex;flex-direction:column;align-items:center;min-width:70px;}
+.rtag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:15px;color:var(--gold);padding-top:1px;white-space:nowrap;font-weight:600;}
+.rdot{width:11px;height:11px;border-radius:50%;background:var(--paper);border:2px solid var(--gold);margin-top:8px;}
+.rconn{width:2px;flex:1;min-height:30px;background:var(--line-soft);margin:4px 0;}
+.rbody{padding-bottom:30px;flex:1;}
+.rbody .rt{font-family:"Noto Serif KR";font-size:16px;color:var(--ink);}
+.rbody ul{list-style:none;margin-top:9px;display:flex;flex-direction:column;gap:6px;}
+.rbody li{font-size:12.5px;color:var(--ink-soft);padding-left:16px;position:relative;line-height:1.55;}
+.rbody li::before{content:"";position:absolute;left:1px;top:8px;width:4px;height:4px;border-radius:50%;background:var(--muted-3);}
+.rstep.last .rdot{background:var(--gold);}
+
+/* ===== price reframe (shift + recovery) ===== */
+.shift{display:grid;grid-template-columns:1fr;gap:12px;}
+.sbox{border-radius:16px;padding:20px 22px;border:1px solid var(--line-soft);}
+.sbox.before{background:rgba(252,250,244,.55);}
+.sbox.after{background:linear-gradient(160deg,#FBF3E3,#F6ECD8);border-color:var(--line);}
+.sbox .slb{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;}
+.before .slb{color:var(--muted);} .after .slb{color:var(--gold);}
+.sbox .sv{font-family:"Noto Serif KR";font-size:16px;color:var(--ink);margin:9px 0 4px;}
+.after .sv{color:var(--gold-deep);}
+.sbox .sd{font-size:13px;color:var(--ink-soft);line-height:1.65;}
+
+.recov{margin-top:16px;border-radius:18px;border:1px solid var(--gold);padding:24px 22px;
+  background:linear-gradient(165deg,#FCF4E3,#F8EFDD);box-shadow:0 34px 64px -42px var(--gold-glow);}
+.recov .rk{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+.recov .rh{font-family:"Noto Serif KR";font-size:18px;color:var(--ink);margin-top:11px;line-height:1.45;}
+.recov .rrow{display:flex;gap:12px;align-items:baseline;margin-top:16px;font-size:13.5px;color:var(--ink-soft);}
+.recov .rrow span{flex:none;font-family:"Noto Serif KR";font-size:12.5px;font-weight:600;width:42px;color:var(--muted);}
+.recov .rrow.on span{color:var(--gold-deep);}
+.recov .rrow.on{color:var(--ink);font-weight:500;}
+.recov .rplus{color:var(--gold);font-size:17px;margin:6px 0 0 14px;}
+.recov .rd{font-size:12.5px;color:var(--ink-soft);line-height:1.7;margin-top:16px;border-top:1px dashed var(--line-soft);padding-top:14px;}
+
+/* ===== pricing tiers ===== */
+.pricehead h2{font-size:24px;line-height:1.5;font-weight:500;}
+.pricehead h2 .soft{color:var(--muted);font-weight:300;}
+.tiers{display:flex;flex-direction:column;gap:18px;margin-top:10px;}
+.tier{border-radius:20px;padding:26px 24px;border:1px solid var(--line-soft);position:relative;
+  background:linear-gradient(160deg,var(--panel),var(--panel-2));box-shadow:0 24px 50px -38px rgba(58,44,32,.28);}
+.tier.rec{border:1.5px solid var(--gold);background:linear-gradient(168deg,#FCF4E2,#F7EDD9);
+  box-shadow:0 50px 90px -44px var(--gold-glow);transform:scale(1.012);}
+.tier .badge{position:absolute;top:-12px;left:24px;background:linear-gradient(90deg,var(--gold-deep),var(--gold));color:#fff;
+  font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:20px;
+  box-shadow:0 12px 24px -10px var(--gold-glow);}
+.tier .tg{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+.tier.rec .tg{color:var(--gold);}
+.tier .tn{font-family:"Noto Serif KR";font-size:19px;color:var(--ink);margin-top:9px;line-height:1.4;}
+.tier .price{margin-top:16px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;}
+.tier .price .pre{font-family:"Noto Serif KR";font-size:15px;color:var(--ink-soft);}
+.tier .price .amt{font-family:"Cormorant Garamond",serif;font-size:40px;font-weight:600;color:var(--ink);line-height:1;}
+.tier.rec .price .amt{color:var(--gold-deep);}
+.tier .price .per{font-size:13px;color:var(--ink-soft);}
+.tier .price .vat{font-size:12px;color:var(--muted);}
+.tier .price .was{font-family:"Cormorant Garamond",serif;font-size:21px;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--rose-deep);opacity:.75;margin-right:4px;}
+.tier li.warn{color:var(--rose-deep);}
+.tier li.warn::before{background:var(--rose);}
+.tier .pay{margin-top:11px;font-size:12.5px;color:var(--gold-deep);background:var(--rose-bg);border:1px solid var(--line-soft);
+  border-radius:11px;padding:10px 13px;line-height:1.55;}
+.tier .desc{margin-top:14px;font-size:13.5px;color:var(--ink-soft);line-height:1.72;}
+.tier ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px;}
+.tier li{font-size:13px;color:var(--ink-soft);padding-left:20px;position:relative;line-height:1.55;}
+.tier li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:50%;background:var(--gold);}
+.tier li.inc{color:var(--gold-deep);font-weight:600;}
+.tier li.inc::before{background:var(--rose);}
+.pricenote{margin-top:22px;font-size:12.5px;color:var(--muted);line-height:1.75;}
+
+/* ===== faq ===== */
+.faq details{border-bottom:1px solid var(--line-soft);}
+.faq summary{list-style:none;cursor:pointer;padding:20px 0;font-family:"Noto Serif KR";font-size:15.5px;color:var(--ink);
+  display:flex;justify-content:space-between;gap:16px;align-items:flex-start;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary .pl{color:var(--gold);font-size:20px;font-weight:300;transition:transform .35s var(--ease);flex:none;line-height:1.35;}
+.faq details[open] summary .pl{transform:rotate(45deg);}
+.faq .fa{font-size:13.5px;color:var(--ink-soft);line-height:1.8;padding:0 0 22px;font-weight:400;}
+
+/* ===== CTA ===== */
+.cta{padding:96px 0 56px;}
+.cta .ph{aspect-ratio:21/9;margin-bottom:34px;}
+.cta h2{font-size:25px;font-weight:500;line-height:1.5;}
+.cta h2 .g{color:var(--gold);}
+.cta .cd{margin-top:22px;font-size:15px;color:var(--ink-soft);font-weight:400;line-height:1.85;}
+.ctacard{margin-top:32px;border:1px solid var(--gold);border-radius:18px;
+  background:linear-gradient(165deg,#FCF4E3,#F7EDD9);padding:26px 24px;box-shadow:0 40px 76px -44px var(--gold-glow);}
+.ctacard .ci{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px;}
+.ctacard .cr{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:14px;color:var(--ink);line-height:1.5;}
+.ctacard .cr .k{color:var(--gold-deep);font-family:"Cormorant Garamond";font-style:italic;font-size:18px;min-width:18px;flex:none;}
+.ctabtn{margin-top:24px;width:100%;display:block;text-align:center;background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+  color:#fff;font-family:"Pretendard";font-weight:700;font-size:15px;letter-spacing:.02em;padding:18px;border-radius:14px;
+  text-decoration:none;border:none;box-shadow:0 20px 40px -18px var(--gold-glow);}
+.ctasub{margin-top:14px;text-align:center;font-size:12px;color:var(--muted);}
+
+footer{padding:46px 0 64px;text-align:center;border-top:1px solid var(--line-soft);margin-top:40px;}
+footer .fb{font-size:13px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;font-weight:700;}
+footer .fsig{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:var(--gold-deep);letter-spacing:.02em;margin-top:8px;}
+footer .fs{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.85;}
+footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px solid var(--line-soft);font-size:11px;color:var(--muted);line-height:1.95;letter-spacing:.01em;}
+
+/* ===== 손님 화면 동선 퍼널 (interactive, light) ===== */
+.funnel{margin-top:32px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.funnel__lead{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:18px;max-width:30em;}
+.funnel__switch{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);margin-bottom:30px;box-shadow:0 10px 26px -20px rgba(58,44,32,.3);}
+.funnel__switch button{font-family:"Pretendard";font-size:13.5px;font-weight:600;color:var(--ink-soft);background:transparent;border:none;cursor:pointer;padding:9px 22px;border-radius:999px;-webkit-appearance:none;appearance:none;transition:background .28s ease,color .28s ease;}
+.funnel__switch button[data-state="dim"][aria-pressed="true"]{background:var(--paper-3);color:var(--ink);}
+.funnel__switch button[data-state="clear"][aria-pressed="true"]{background:linear-gradient(145deg,var(--gold),var(--gold-deep));color:#fff;}
+.funnel__switch button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+.funnel__stages{list-style:none;width:100%;max-width:440px;display:flex;flex-direction:column;gap:11px;}
+.fstage{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.fstage__bar{width:var(--wd);height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(100deg,rgba(58,44,32,.10),rgba(58,44,32,.04));border:1px solid var(--line);
+  transition:width .5s cubic-bezier(.3,.7,.2,1),background .4s ease,border-color .4s ease,box-shadow .4s ease;}
+.funnel__stages.is-clear .fstage__bar{width:var(--wc);}
+.fstage__name{font-family:"Noto Serif KR";font-size:14.5px;font-weight:700;color:var(--ink);white-space:nowrap;letter-spacing:-.01em;}
+.fstage__leak{font-size:11.5px;color:var(--rose-deep);height:1.1em;line-height:1.1em;opacity:.92;transition:opacity .35s ease;}
+.funnel__stages.is-clear .fstage__leak{opacity:0;}
+.fstage--goal .fstage__bar{background:linear-gradient(100deg,rgba(176,134,60,.16),rgba(190,131,133,.10));}
+.funnel__stages.is-clear .fstage--goal .fstage__bar{background:linear-gradient(100deg,var(--gold-deep),var(--gold));border-color:transparent;box-shadow:0 12px 30px -10px var(--gold-glow);}
+.funnel__stages.is-clear .fstage--goal .fstage__name{color:#fff;}
+.funnel__cap{position:relative;height:2.9em;margin-top:38px;width:100%;max-width:30em;}
+.funnel__cap p{position:absolute;inset:0;font-family:"Noto Serif KR";font-size:clamp(16px,3.8vw,20px);line-height:1.5;letter-spacing:-.01em;transition:opacity .4s ease;}
+.funnel__cap .capdim{opacity:1;color:var(--ink-soft);}
+.funnel__cap .capclear{opacity:0;color:var(--ink);}
+.funnel__cap .capclear b{color:var(--gold-deep);font-weight:600;}
+.funnel__cap.is-clear .capdim{opacity:0;}
+.funnel__cap.is-clear .capclear{opacity:1;}
+.funnel__note{font-size:12px;color:var(--muted);margin-top:22px;max-width:30em;line-height:1.6;}
+@media(prefers-reduced-motion:reduce){.fstage__bar,.fstage__leak,.funnel__cap p,.funnel__switch button{transition:none;}}
+
+/* channel chips (확장 로드맵) */
+.ctag{display:inline-block;font-family:"Pretendard";font-size:12px;color:var(--gold-deep);background:var(--rose-bg);
+  border:1px solid var(--line-soft);border-radius:8px;padding:5px 11px;margin:9px 6px 0 0;letter-spacing:.01em;}
+.ctag.opt{color:var(--ink-soft);background:rgba(58,44,32,.05);}
+
+@media (min-width:640px){
+  .hero h1{font-size:40px;}
+  .anchor h2{font-size:30px;}
+  .duo{grid-template-columns:1fr 1fr;}
+  .shift{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== 01. HERO ===================== -->
+<section class="hero photo-hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="brandline r in">WEPLACE <span class="x">×</span> ASTROOM</div>
+    </div>
+    <div class="hero-bottom">
+      <h1 class="r in d1">
+        월 300만 원으로 발견되던 두 매장을,<br>
+        이제 발견부터 예약까지 <span class="g">한 곳에서.</span>
+      </h1>
+      <div class="scrollcue r in d2"><span class="ln"></span> Scroll</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 01.5 INTRO (텍스트 분산 슬롯) ===================== -->
+<section class="anchor intro">
+  <div class="wrap">
+    <div class="eyebrow r">Weplace &times; Astroom</div>
+    <div class="kicker r">송파위례점 · 문정점 · 2지점 통합 검색전환</div>
+    <p class="introlead r d1">
+      위례점과 문정점 — <b>같은 레이어드 전문, 다른 동네.</b><br>
+      기존 네이버 비용을 부정하지 않습니다. 그 발견이 예약과 브랜드 자산으로 이어지도록,
+      <span class="gold">네이버·구글·홈페이지·AI검색을 한 흐름으로</span> 묶습니다.
+    </p>
+    <p class="introsub r d2">
+      고객은 네이버에서 발견한 뒤, 사진을 보고 리뷰를 읽고 구글에서 확인하고 AI에게 다시 묻습니다 —
+      그 모든 화면에서 ‘레이어드 전문’으로 보여야 합니다.
+    </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 02. 현재 상황 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">지금, 검색에서 벌어지는 일</div>
+    <h2 class="r d1">
+      네이버는 이미 강합니다.<br>
+      <span class="soft">문제는 그다음입니다.</span>
+    </h2>
+    <p class="note r d2">
+      아스트룸은 이미 네이버에서 충분히 발견되고 있습니다.
+      두 지점이 쌓아온 리뷰가 그 증거입니다 — 돈으로 하루아침에 만들 수 없는 자산입니다.
+    </p>
+
+    <div class="data r d2" style="margin-top:26px;">
+      <div class="dcard">
+        <div class="dnum" data-to="1803">0</div>
+        <div class="dlb">송파위례점 방문자 리뷰</div>
+        <div class="dsrc">네이버 플레이스 기준</div>
+      </div>
+      <div class="dcard">
+        <div class="dnum" data-to="2971">0</div>
+        <div class="dlb">송파위례점 블로그 후기</div>
+        <div class="dsrc">누적 콘텐츠 자산</div>
+      </div>
+      <div class="dcard">
+        <div class="dnum" data-to="3550">0</div>
+        <div class="dlb">문정점 방문자 리뷰</div>
+        <div class="dsrc">★4.98 · 네이버 플레이스</div>
+      </div>
+      <div class="dcard">
+        <div class="dnum" data-to="3144">0</div>
+        <div class="dlb">문정점 블로그 후기</div>
+        <div class="dsrc">누적 콘텐츠 자산</div>
+      </div>
+      <div class="dcard wide">
+        <div class="wi">
+          <svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.8 1-5.8L3.5 9.2l5.9-.9z"/></svg>
+        </div>
+        <div class="wt">두 지점 합산 방문자 리뷰 5,000건 이상, 블로그 후기 6,000건 이상.
+          <span>하루아침에 만들 수 없는 신뢰의 기록입니다.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ph r d3" style="aspect-ratio:21/9;margin-top:22px;">
+      <div class="ghost">salon</div>
+      <img src="salon-wide.jpg" alt="아스트룸헤어 살롱" onerror="this.remove()">
+      <span class="ptag">이미 운영 중인 두 살롱</span>
+    </div>
+
+    <p class="note r d3">
+      다만 발견 이후가 문제입니다. 구글 지도, 홈페이지, AI 검색에서 같은 전문성으로 보이지 않으면,
+      <b>발견된 고객이 예약 직전에 이탈합니다.</b> 특히 레이어드 시술은 ‘확인’을 많이 하는 시술입니다.
+    </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== BAND ===================== -->
+<section class="band band-style">
+  <p class="bq">발견된 고객은, 예약 전에 네 번 더 확인합니다.
+    <span class="sm">사진 · 리뷰 · 구글 · AI — 그 모든 화면에서 같은 ‘레이어드 전문’으로.</span>
+  </p>
+</section>
+
+<!-- ===================== 03. 네이버 비용 인정 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">네이버 비용을 다시 본다면</div>
+    <h2 class="r d1">
+      이 비용은 낭비가 아니라,<br>
+      <span class="gold">발견 비용</span>입니다.
+    </h2>
+    <p class="note r d2">
+      현재 두 지점 합산 월 300만 원 이상을 네이버 상위노출에 쓰고 계십니다.
+      이건 줄여야 할 비용이 아닙니다. <b>고객을 만나기 위한 입장권</b>을 이미 확보하고 계신 겁니다.
+    </p>
+
+    <div class="card r d2" style="margin-top:26px;">
+      <div class="pullbox">
+        <p class="pull">네이버를 줄이자는<br>제안이 아닙니다.<br><span class="g">발견 운영과 회수 구조를<br>한 곳에서</span> 묶는 제안입니다.</p>
+      </div>
+      <p class="small">
+        네이버 발견 운영과 구글·홈페이지·AI 검색 회수 구조를 한 창구에서 관리해,
+        <b>발견부터 예약까지 한 흐름</b>으로 잇습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 04. 고객 불안 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">고객의 머릿속</div>
+    <h2 class="r d1">
+      고객은 미용실을 찾는 게 아니라,<br>
+      <span class="rose">실패하지 않을 근거</span>를 찾습니다.
+    </h2>
+    <p class="note r d2" style="margin-bottom:30px;">
+      레이어드펌·C컬펌은 결과 실패에 대한 불안이 큰 시술입니다.
+      예약 버튼을 누르기 전, 고객의 질문은 거의 정해져 있습니다.
+    </p>
+
+    <div class="qcol r d2">
+      <div class="qline">“나한테 레이어드펌이 어울릴까?”<span>얼굴형 적합성</span></div>
+      <div class="qline">“머리 망하면 어떡하지?”<span>결과 실패 불안</span></div>
+      <div class="qline">“사진처럼 나올까?”<span>결과 신뢰</span></div>
+      <div class="qline">“상담을 제대로 해줄까?”<span>상담 신뢰</span></div>
+      <div class="qline">“손질이 쉬울까?”<span>일상 관리 부담</span></div>
+      <div class="qline">“재방문 때 지난 시술을 기억해줄까?”<span>연속성</span></div>
+    </div>
+
+    <div class="funnel r d3">
+      <p class="funnel__lead">같은 손님도, 화면이 흐리면 단계마다 조용히 빠집니다. 아래 버튼으로 직접 비교해 보세요.</p>
+      <div class="funnel__switch" role="group" aria-label="화면 상태 전환">
+        <button type="button" data-state="dim" aria-pressed="true">흐림</button>
+        <button type="button" data-state="clear" aria-pressed="false">선명</button>
+      </div>
+      <ol class="funnel__stages" id="funnelStages">
+        <li class="fstage" style="--wd:100%;--wc:100%">
+          <div class="fstage__bar"><span class="fstage__name">검색에서 발견</span></div>
+          <span class="fstage__leak" aria-hidden="true"></span>
+        </li>
+        <li class="fstage" style="--wd:84%;--wc:96%">
+          <div class="fstage__bar"><span class="fstage__name">사진 첫 장</span></div>
+          <span class="fstage__leak">레이어드 전문인지 한눈에 안 읽힘</span>
+        </li>
+        <li class="fstage" style="--wd:70%;--wc:93%">
+          <div class="fstage__bar"><span class="fstage__name">리뷰·후기</span></div>
+          <span class="fstage__leak">사진처럼 나올지 확신이 안 섬</span>
+        </li>
+        <li class="fstage" style="--wd:56%;--wc:90%">
+          <div class="fstage__bar"><span class="fstage__name">가격·메뉴</span></div>
+          <span class="fstage__leak">가격 기준이 안 보임</span>
+        </li>
+        <li class="fstage" style="--wd:42%;--wc:87%">
+          <div class="fstage__bar"><span class="fstage__name">구글·홈페이지</span></div>
+          <span class="fstage__leak">구글엔 정보가 비어 있음</span>
+        </li>
+        <li class="fstage fstage--goal" style="--wd:28%;--wc:82%">
+          <div class="fstage__bar"><span class="fstage__name">예약</span></div>
+          <span class="fstage__leak" aria-hidden="true"></span>
+        </li>
+      </ol>
+      <div class="funnel__cap" id="funnelCap" aria-live="polite">
+        <p class="capdim">화면이 흐리면, 단계마다 손님이 조용히 빠집니다.</p>
+        <p class="capclear">화면이 선명하면, 더 많은 손님이 <b>예약까지 옵니다.</b></p>
+      </div>
+      <p class="funnel__note">숫자가 아니라 흐름입니다 — 화면이 정리될수록 단계마다 좁아지지 않습니다.</p>
+    </div>
+
+    <p class="note r d3" style="margin:34px 0 16px;">
+      아스트룸이 <b>이미 갖고 있는</b> 1:1 상담, 시술기록관리, 프리미엄 약제, 레이어드 전문성은
+      이 불안을 줄이는 강한 근거입니다. <span class="gold">바로 이 근거가 화면을 ‘선명’하게 만듭니다.</span>
+    </p>
+
+    <div class="trio r d3">
+      <div>
+        <div class="ph"><div class="ghost">consult</div><img src="consulting.jpg" alt="1:1 상담" onerror="this.remove()"></div>
+        <div class="tcap">1:1 상담</div>
+      </div>
+      <div>
+        <div class="ph"><div class="ghost">record</div><img src="treatment-record.jpg" alt="시술기록관리" onerror="this.remove()"></div>
+        <div class="tcap">시술기록관리</div>
+      </div>
+      <div>
+        <div class="ph"><div class="ghost">product</div><img src="premium-product.jpg" alt="프리미엄 약제" onerror="this.remove()"></div>
+        <div class="tcap">프리미엄 약제</div>
+      </div>
+    </div>
+
+    <p class="note r d3" style="margin-top:22px;">
+      이제 그 근거가 <span class="gold">검색 화면에서도 보여야</span> 합니다.
+    </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 05. 2지점 포지션 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">한 브랜드, 두 상권</div>
+    <h2 class="r d1">같은 브랜드, 다른 동네의 얼굴.</h2>
+    <p class="note r d2" style="margin-bottom:28px;">
+      한 매장이면 직접 하셔도 됩니다. 두 매장을 같은 ‘아스트룸 레이어드 전문’으로 묶으면서
+      동네는 다르게 보이게 하는 일에는 <b>구조</b>가 필요합니다.
+    </p>
+
+    <div class="duo r d2">
+      <div class="loc wirye">
+        <div class="ph"><div class="ghost">wirye</div><img src="wirye.jpg" alt="송파위례점" onerror="this.remove()"></div>
+        <div class="lc">
+          <div class="lk">송파위례점</div>
+          <div class="lh">생활권 단골형<br>레이어드 살롱</div>
+          <ul>
+            <li>위례·거여·마천·감일·장지동 생활권</li>
+            <li>편안하게 상담받는 레이어드 스타일 전문</li>
+            <li>레이어드 컷 · 레이어드 펌 중심</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="loc munjeong">
+        <div class="ph"><div class="ghost">munjeong</div><img src="munjeong.jpg" alt="문정점" onerror="this.remove()"></div>
+        <div class="lc">
+          <div class="lk">문정점</div>
+          <div class="lh">퇴근 후 방문 좋은<br>레이어드 C컬펌 살롱</div>
+          <ul>
+            <li>문정역·송파 법조타운·문정동 직장인</li>
+            <li>2030 여성 · 손질 편한 스타일 중심</li>
+            <li>레이어드 C컬펌 특화</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="umbrella r d3">
+      <div class="uk">공통 브랜드 우산</div>
+      <div class="chips">
+        <span>레이어드 전문</span>
+        <span>1:1 상담</span>
+        <span>시술기록관리</span>
+        <span>프리미엄 약제</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 06. 검색전환 흐름 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">고객의 동선</div>
+    <h2 class="r d1">
+      발견하고, 확인하고,<br>
+      비교한 뒤 예약합니다.
+    </h2>
+    <p class="note r d2" style="margin-bottom:34px;">
+      네이버는 발견의 출발점입니다. 다만 확신이 안 선 고객은 구글에서 다시 확인하고,
+      요즘은 AI에게 한 번 더 묻습니다.
+    </p>
+
+    <div class="flow r d2">
+      <div class="fstep">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div><div class="fconn"></div></div>
+        <div class="fbody"><div class="lb">Naver</div><div class="ti">네이버 — 발견</div><div class="de">‘위례 미용실’ ‘문정역 미용실’로 처음 만난다.</div></div>
+      </div>
+      <div class="fstep">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg></div><div class="fconn"></div></div>
+        <div class="fbody"><div class="lb">Photo · Review</div><div class="ti">사진·리뷰 — 결과 확인</div><div class="de">스타일과 후기로 실패 가능성을 줄인다.</div></div>
+      </div>
+      <div class="fstep">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></div><div class="fconn"></div></div>
+        <div class="fbody"><div class="lb">Google Map</div><div class="ti">구글 지도 — 재확인</div><div class="de">위치·영업시간·리뷰를 다시 본다.</div></div>
+      </div>
+      <div class="fstep">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><path d="M4 9l8-5 8 5v9a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M9 20v-6h6v6"/></svg></div><div class="fconn"></div></div>
+        <div class="fbody"><div class="lb">Homepage</div><div class="ti">홈페이지 — 공식 기준점</div><div class="de">지점별 정보가 한곳에서 정리된다.</div></div>
+      </div>
+      <div class="fstep">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><path d="M12 3l2 5 5 .5-3.8 3.4 1.2 5L12 19l-4.6 2.9 1.2-5L4.8 8.5 10 8z"/></svg></div><div class="fconn"></div></div>
+        <div class="fbody"><div class="lb">AI Search</div><div class="ti">AI 검색 — 추천 근거</div><div class="de">정리된 근거를 읽고 후보에 올린다.</div></div>
+      </div>
+      <div class="fstep last">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></div></div>
+        <div class="fbody"><div class="lb">Reserve</div><div class="ti">예약 — 전환</div><div class="de">불안이 사라진 자리에 예약이 남는다.</div></div>
+      </div>
+    </div>
+
+    <div class="card r d3" style="margin-top:28px;">
+      <p class="lead">
+        네이버에서 발견된 고객이 구글과 AI에서 다시 확인했을 때도,
+        아스트룸은 <span class="gold">같은 말로</span> 보여야 합니다.
+      </p>
+      <div class="fwords">
+        <span>레이어드 전문</span><span>1:1 상담</span><span>시술기록관리</span><span>프리미엄 약제</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 07. AI 검색 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="ph r" style="aspect-ratio:21/9;margin-bottom:30px;">
+      <div class="ghost">ai search</div>
+      <img src="ai-search.jpg" alt="AI 검색 화면" onerror="this.remove()">
+      <span class="ptag">AI가 읽는 검색 화면</span>
+    </div>
+    <div class="kicker r">고객은 이제, AI에게도 묻습니다</div>
+    <h2 class="r d1">
+      AI는 감으로 추천하지 않습니다.<br>
+      <span class="soft">정리된 매장을 읽습니다.</span>
+    </h2>
+    <p class="note r d2" style="margin-bottom:24px;">
+      30·40대 고객도 이제 ‘잘하는 곳’을 AI에게 먼저 물어봅니다. 예를 들면 —
+    </p>
+
+    <div class="aiq r d2">
+      <div class="ql">위례 레이어드펌 잘하는 곳 추천해줘</div>
+      <div class="ql">문정역 레이어드 C컬펌 잘하는 미용실 어디야?</div>
+      <div class="ql">손질 쉬운 레이어드펌 잘하는 곳 알려줘</div>
+      <div class="ql">송파에서 레이어드컷 잘하는 미용실 추천해줘</div>
+    </div>
+
+    <div class="aimock r d2">
+      <div class="aibar"><span class="dotr r1"></span><span class="dotr r2"></span><span class="dotr r3"></span><span class="ttl">AI 검색 화면</span></div>
+      <div class="uq"><div class="b">위례 레이어드펌 잘하는 곳 추천해줘</div></div>
+      <div class="ans">
+        <div class="avt"></div>
+        <div class="body">
+          <span class="h">위례 지역</span>에서 후기·위치·영업정보가 잘 정리된 곳을 정리해 드릴게요.
+          <div class="aireco">
+            <div class="airow"><span class="n">1</span><div><b>아스트룸헤어 송파위례점</b> · 레이어드 전문 · 구글·홈페이지·리뷰 정리됨</div></div>
+            <div class="airow"><span class="n">2</span><div><b>○○ 헤어</b> · 스타일·코스 안내 확인 가능</div></div>
+            <div class="airow"><span class="n">3</span><div><b>△△ 살롱</b> · 위치·예약 동선 명확함</div></div>
+          </div>
+          <span style="display:block;margin-top:12px;">정확한 스타일과 가격은 매장 정보를 함께 확인해 보세요<span class="cursor"></span></span>
+        </div>
+      </div>
+      <div class="mocknote">＊ 실제 AI 답변을 단순화해 재현한 예시입니다. AI 노출을 ‘보장’하지 않습니다. 이 작업은 <b>AI와 구글이 읽을 수 있는 근거를 정리</b>하는 일입니다.</div>
+    </div>
+
+    <div class="card r d3" style="margin-top:22px;">
+      <p class="lead">
+        AI 검색은 새로운 광고판이 아니라,<br>
+        <span class="gold">이미 정리된 매장을 읽는 검색 화면</span>입니다.
+      </p>
+      <p class="small">
+        AI는 구글 지도·홈페이지·리뷰·사진·설명문·영업시간·예약 동선처럼 온라인에 정리된 근거를 읽습니다.
+        그래서 핵심은 ‘노출을 사는 일’이 아니라, 두 지점을 <b>읽기 좋게 정리해 두는 일</b>입니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 07.5 송파 상권 · 검색 데이터 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="eyebrow r">Why here, why now</div>
+    <div class="kicker r">송파 상권 · 검색 환경</div>
+    <h2 class="r d1">
+      이 동네 고객은,<br>
+      <span class="soft">이미 구글과 AI로 다시 확인합니다.</span>
+    </h2>
+    <p class="note r d2" style="margin-bottom:26px;">
+      송파는 거주 인구도, 오가는 인구도 큰 생활권입니다. 그리고 그 인구가 검색하는 방식이 빠르게 바뀌고 있습니다.
+    </p>
+
+    <div class="data r d2">
+      <div class="dcard">
+        <div class="dnum" data-to="65">0<span class="u">만</span></div>
+        <div class="dlb">송파구 거주 인구</div>
+        <div class="dsrc">행정안전부 · 2026.5</div>
+      </div>
+      <div class="dcard">
+        <div class="dnum" data-to="134">0<span class="u">만</span></div>
+        <div class="dlb">연간 외국인 방문 · 주민의 2배</div>
+        <div class="dsrc">한국관광데이터랩 · 2025</div>
+      </div>
+      <div class="dcard">
+        <div class="dnum" data-to="2162">0<span class="u">만</span></div>
+        <div class="dlb">ChatGPT 국내 월간 사용자</div>
+        <div class="dsrc">스마트폰 이용자 약 40% · 와이즈앱 2025.11</div>
+      </div>
+      <div class="dcard">
+        <div class="dnum" data-to="47.9" data-dec="1">0<span class="u">%</span></div>
+        <div class="dlb">구글 검색 점유율 · 네이버 첫 추월</div>
+        <div class="dsrc">StatCounter 전체 기기 · 2025.12</div>
+      </div>
+      <div class="dcard wide">
+        <div class="wi">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>
+        </div>
+        <div class="wt">한국인 절반(50.9%)이 이미 ChatGPT를 써봤습니다.
+          <span>2030 여성과 법조타운 직장인이 두터운 송파·문정에서, ‘발견 이후’ 화면은 더 중요해집니다.</span>
+        </div>
+      </div>
+    </div>
+    <p class="pricenote r d3">＊ 출처 — 행정안전부 주민등록인구(2026.5) · 한국관광데이터랩(2025) · 와이즈앱·리테일, 오픈서베이(2025) · StatCounter(2025.12).</p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 08. 90일 로드맵 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">90일 로드맵</div>
+    <h2 class="r d1">진단부터, 월간 운영까지.</h2>
+    <p class="note r d2" style="margin-bottom:34px;">
+      한 번 세팅하고 끝나는 일이 아닙니다. 두 지점이 같은 기준으로 계속 맞춰져야
+      검색에서 흔들리지 않습니다.
+    </p>
+
+    <div class="road r d2">
+      <div class="rstep">
+        <div class="rrail"><div class="rtag">D-14</div><div class="rdot"></div><div class="rconn"></div></div>
+        <div class="rbody">
+          <div class="rt">2지점 진단</div>
+          <ul>
+            <li>위례·문정 네이버 화면 점검</li>
+            <li>구글 비즈니스 프로필 점검</li>
+            <li>리뷰·사진·가격·예약 동선 확인</li>
+            <li>대표 키워드 정리 · 두 지점 포지션 분리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rstep">
+        <div class="rrail"><div class="rtag">D-Day</div><div class="rdot"></div><div class="rconn"></div></div>
+        <div class="rbody">
+          <div class="rt">브랜드 기준점 구축</div>
+          <ul>
+            <li>아스트룸 브랜드 허브 페이지</li>
+            <li>위례점 / 문정점 지점별 페이지</li>
+            <li>레이어드 FAQ · 고객 불안 해소 문구</li>
+            <li>예약 전환 문구 정리</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rstep">
+        <div class="rrail"><div class="rtag">D+30</div><div class="rdot"></div><div class="rconn"></div></div>
+        <div class="rbody">
+          <div class="rt">검색전환 구조화</div>
+          <ul>
+            <li>네이버·구글·홈페이지 정보 일치</li>
+            <li>스타일별 콘텐츠 설계 · AI 화면 점검</li>
+            <li>리뷰 유도 문구 개선</li>
+            <li>상권 연계 콘텐츠 · CTA 개선</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rstep last">
+        <div class="rrail"><div class="rtag">D+90~</div><div class="rdot"></div></div>
+        <div class="rbody">
+          <div class="rt">월간 운영</div>
+          <ul>
+            <li>지점별 검색화면 점검</li>
+            <li>콘텐츠 흐름 관리 · AI 월간 점검</li>
+            <li>2지점 월간 리포트</li>
+            <li>네이버 비용 회수율 점검</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 09. 가격 리프레임 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">가격 이전에, 먼저 짚을 것</div>
+    <h2 class="r d1" style="font-weight:400;">
+      기존 비용에 무작정 더하는 게 아니라,<br>
+      <span class="gold">나뉘어 있던 발견과 회수를 한 곳으로</span> 묶는 일입니다.
+    </h2>
+    <p class="note r d2" style="margin:22px 0 28px;">
+      기존 구조에서는 네이버 상위노출 비용은 기존 업체가 받고, 구글·홈페이지·AI검색은 따로 정리되지 않았습니다.
+      Weplace 통합 운영에서는 네이버 발견 운영과 검색전환 회수 구조를 한 곳에서 관리합니다.
+    </p>
+
+    <div class="shift r d2">
+      <div class="sbox before">
+        <div class="slb">지금 · 나뉜 구조</div>
+        <div class="sv">발견은 기존 업체, 회수는 공백</div>
+        <div class="sd">네이버 비용은 기존 업체가 받고, 구글·홈페이지·AI는 따로 정리되지 않습니다.</div>
+      </div>
+      <div class="sbox after">
+        <div class="slb">이후 · 통합 운영</div>
+        <div class="sv">발견 + 회수, 한 창구</div>
+        <div class="sd">네이버 발견 운영과 검색전환 회수 구조를 Weplace가 한 곳에서 관리합니다.</div>
+      </div>
+    </div>
+
+    <div class="recov r d3">
+      <div class="rk">발견 + 회수, 한 창구</div>
+      <div class="rh">나뉘어 있던 두 흐름을 하나로 묶습니다.</div>
+      <div class="rrow"><span>지금</span> 발견은 기존 업체 · 회수는 공백 — 창구가 둘, 회수율은 반쪽</div>
+      <div class="rplus">↓</div>
+      <div class="rrow on"><span>통합</span> 발견 운영 + 검색전환 OS — 한 창구, 회수율을 매달 숫자로</div>
+      <div class="rd">발견 비용이 실제로 얼마나 예약으로 돌아오는지, 두 지점 통합 리포트로 확인합니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10. 가격 카드 ===================== -->
+<section class="anchor" style="padding-top:24px;">
+  <div class="wrap pricehead">
+    <h2 class="r d1" style="margin-bottom:28px;">
+      <span class="soft">광고비가 아니라,</span><br>
+      발견부터 예약까지 한 곳에서 관리하는 비용입니다.
+    </h2>
+
+    <div class="tiers">
+      <!-- A · 비교안 -->
+      <div class="tier r d1">
+        <div class="tg">A · 기존 업체 유지형 / 비교안</div>
+        <div class="tn">기존 업체 유지 + Weplace 회수 구조</div>
+        <div class="price"><span class="amt">240</span><span class="per">만 원 / 지점 · 월</span><span class="vat">+ VAT</span></div>
+        <div class="pay">2지점 합산 월 480 · 기존 네이버 상위노출 300(기존 업체) + Weplace 검색전환 OS 180</div>
+        <div class="desc">
+          기존 업체를 유지할 경우의 비교안입니다. 네이버는 기존 업체가 운영하고, Weplace는 구글·홈페이지·AI검색만 보완합니다.
+        </div>
+        <ul>
+          <li>네이버 상위노출 — 기존 업체 운영 (월 300)</li>
+          <li>구글 비즈니스 프로필 정비</li>
+          <li>구글·홈페이지·AI검색 회수 구조</li>
+          <li>2지점 월간 리포트</li>
+          <li class="warn">발견과 회수의 창구가 나뉘어, 회수율을 한 번에 보기 어렵습니다</li>
+        </ul>
+      </div>
+
+      <!-- B 추천 -->
+      <div class="tier rec r d2">
+        <div class="badge">추천</div>
+        <div class="tg">B · Weplace 2지점 통합 운영형</div>
+        <div class="tn">Weplace 2지점 통합 검색전환 OS</div>
+        <div class="price"><span class="was">지점당 250</span><span class="amt">225</span><span class="per">만 원 / 지점 · 월</span><span class="vat">+ VAT</span></div>
+        <div class="pay">2지점 합산 월 450 · 발견 운영 300 + 검색전환 OS 200 − 2지점 통합 리워드 50</div>
+        <div class="desc">
+          네이버 상위노출 운영부터 구글·홈페이지·AI검색·예약 전환까지 한 곳에서 관리합니다.
+          기존에는 네이버에 월 300을 쓰고도 그 뒤가 따로 움직였지만, 이제는 <b style="color:var(--gold-deep)">지점당 월 225(2지점 450)로 발견부터 예약까지 한 창구</b>입니다.
+        </div>
+        <ul>
+          <li>네이버 상위노출 운영·최적화</li>
+          <li>구글 비즈니스 프로필 정비</li>
+          <li>아스트룸 브랜드 허브 페이지</li>
+          <li>위례점 / 문정점 지점별 페이지</li>
+          <li>AI검색 화면 월간 점검</li>
+          <li>네이버·구글·홈페이지 정보 일치 관리</li>
+          <li>리뷰 유도 문구 및 시술 후 안내문</li>
+          <li>레이어드 스타일 콘텐츠 월간 설계</li>
+          <li>2지점 월간 리포트</li>
+          <li>네이버 상위노출 비용 회수율 점검</li>
+        </ul>
+      </div>
+
+      <!-- C 앵커 -->
+      <div class="tier r d3">
+        <div class="tg">C · 상위 앵커</div>
+        <div class="tn">아스트룸 레이어드 브랜드 성장형</div>
+        <div class="price"><span class="amt">300</span><span class="per">만 원 / 지점 · 월</span><span class="vat">+ VAT</span></div>
+        <div class="pay">2지점 합산 월 600 · 1년 운영</div>
+        <div class="desc">B안 전체에 스타일북·디자이너 포트폴리오·숏폼·SNS·채용 브랜딩까지 더한, 레이어드 브랜드 성장 운영안입니다.</div>
+        <ul>
+          <li class="inc">B안 전체 포함</li>
+          <li>스타일북 / 레이어드 사례 아카이브</li>
+          <li>디자이너별 포트폴리오 구조</li>
+          <li>숏폼·릴스 기획</li>
+          <li>인스타·스레드 콘텐츠 설계</li>
+          <li>채용 / 디자이너 브랜딩 보조</li>
+          <li>지점 확장 대비 브랜드 구조화</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pricenote r">
+      ＊ 지점당으로 보면 기존 업체 유지(A) 월 240, 한 곳으로 묶는 통합 운영(B) 월 225 — 묶는 쪽이 지점당 더 적습니다.
+      네이버는 ‘상위노출 운영·최적화·관리’로 진행하며 노출을 보장하지 않고, AI 검색 역시 AI·구글이 읽을 근거를 갖추는 작업입니다.
+      모든 금액은 VAT 별도이며, 분기 결제를 원하실 경우 분기 운영비와 페이지 제작비를 분리해 다시 안내드립니다.
+    </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 10.5 확장 로드맵 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">이 비용은 끝이 아닙니다</div>
+    <h2 class="r d1">
+      지금이 끝이 아니라,<br>
+      <span class="soft">천천히 넓혀가는 시작입니다.</span>
+    </h2>
+    <p class="note r d2" style="margin:18px 0 22px;">
+      처음부터 모든 채널을 벌이지 않습니다. 발견·회수 화면을 먼저 세우고,
+      <span class="gold">숫자로 검증한 뒤</span> 예약을 만든 채널에만 천천히 더합니다.
+    </p>
+
+    <div class="road r d2">
+      <div class="rstep">
+        <div class="rrail"><div class="rtag">0단계</div><div class="rdot"></div><div class="rconn"></div></div>
+        <div class="rbody">
+          <div class="rt">발견·회수 기반 <span style="color:var(--muted);font-size:12px;">· 지금</span></div>
+          <div class="rd">네이버 발견부터 구글·홈페이지·AI까지, 한 창구로 먼저 세웁니다.</div>
+          <div><span class="ctag">네이버</span><span class="ctag">구글(GBP)</span><span class="ctag">홈페이지</span><span class="ctag">AI검색</span></div>
+        </div>
+      </div>
+      <div class="rstep">
+        <div class="rrail"><div class="rtag">1단계</div><div class="rdot"></div><div class="rconn"></div></div>
+        <div class="rbody">
+          <div class="rt">실적 확인</div>
+          <div class="rd">어떤 키워드·화면이 실제 예약을 만드는지 숫자로 검증합니다.</div>
+          <div><span class="ctag">회수율</span><span class="ctag">예약 전환 측정</span></div>
+        </div>
+      </div>
+      <div class="rstep">
+        <div class="rrail"><div class="rtag">2단계</div><div class="rdot"></div><div class="rconn"></div></div>
+        <div class="rbody">
+          <div class="rt">검증된 채널 확장</div>
+          <div class="rd">위례는 동네 단골(당근), 문정·2030은 스타일 콘텐츠로 ‘이야기되는 살롱’으로.</div>
+          <div><span class="ctag">당근 · 위례 단골</span><span class="ctag">인스타·스레드</span><span class="ctag">숏폼·릴스</span><span class="ctag">GBP 리뷰·Q&amp;A</span></div>
+        </div>
+      </div>
+      <div class="rstep last">
+        <div class="rrail"><div class="rtag">3단계</div><div class="rdot"></div></div>
+        <div class="rbody">
+          <div class="rt">외국인 · 브랜드 확장 <span style="color:var(--muted);font-size:12px;">· 선택</span></div>
+          <div class="rd">방문 외국인은 영어 근거로 장기 롱테일, 디자이너 채용·3호점은 브랜드로 키웁니다.</div>
+          <div><span class="ctag opt">Reddit · 영어 GBP · 외국인</span><span class="ctag opt">LinkedIn · 채용·브랜드</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card r d3" style="margin-top:24px;">
+      <p class="small">
+        ＊ 참고 — 송파는 연간 외국인 방문 134만(주민의 2배). 외국인은 ‘방문·관광’ 성격이라
+        Reddit·영어 GBP로 <b>장기 롱테일</b>로 두고, LinkedIn은 고객 유입이 아니라
+        <b>디자이너 채용·브랜드</b>용으로 씁니다.
+      </p>
+    </div>
+
+    <p class="note r d3" style="margin-top:22px;">
+      그래서 이 제안은 한 번 쓰고 끝나는 비용이 아니라,
+      <span class="gold">실적을 보며 함께 키우는 성장 시스템의 0단계</span>입니다.
+    </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 11. FAQ ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="kicker r">자주 묻는 질문</div>
+    <h2 class="r d1" style="margin-bottom:14px;">짚어 두면 좋을 것들.</h2>
+    <div class="faq r d2">
+      <details>
+        <summary>네이버 상위노출만으로 충분하지 않나요?<span class="pl">＋</span></summary>
+        <div class="fa">발견은 충분합니다. 다만 레이어드 시술은 예약 전 확인이 많은 시술입니다. 구글, 사진, 리뷰, 홈페이지, AI 검색에서 같은 전문성으로 보일 때 예약 전 이탈이 줄어듭니다.</div>
+      </details>
+      <details>
+        <summary>기존 네이버 업체와 중복되는 것 아닌가요?<span class="pl">＋</span></summary>
+        <div class="fa">중복이 아니라 통합입니다. 기존 업체를 유지하면 발견과 회수의 창구가 둘로 나뉩니다. Weplace 통합 운영은 네이버 발견 운영부터 구글·홈페이지·AI검색까지 한 창구에서 관리해, 발견 비용이 예약으로 얼마나 돌아오는지 한 번에 봅니다.</div>
+      </details>
+      <details>
+        <summary>홈페이지는 왜 필요한가요?<span class="pl">＋</span></summary>
+        <div class="fa">네이버 예약을 대체하려는 것이 아닙니다. 네이버·구글·AI가 함께 참고할 공식 기준점이 필요합니다. 정보가 흩어져 있으면 AI가 두 지점을 같은 매장으로 읽기 어렵습니다.</div>
+      </details>
+      <details>
+        <summary>AI 검색 노출이 보장되나요?<span class="pl">＋</span></summary>
+        <div class="fa">보장하지 않습니다. 광고가 아니기 때문입니다. 다만 AI와 구글이 읽을 수 있는 근거(정보·리뷰·홈페이지·영업정보)를 정리하면, 추천 후보에 들어갈 가능성을 높이는 기반이 생깁니다.</div>
+      </details>
+      <details>
+        <summary>위례점과 문정점을 따로 관리해야 하나요?<span class="pl">＋</span></summary>
+        <div class="fa">따로이면서 같이 관리해야 합니다. 위례점과 문정점은 다른 상권을 갖고 있지만, 같은 아스트룸 브랜드로 읽혀야 합니다. 그래서 ‘하나의 OS, 두 개의 얼굴’ 구조로 설계합니다.</div>
+      </details>
+      <details>
+        <summary>기존 업체를 바로 해지하기 부담스럽습니다.<span class="pl">＋</span></summary>
+        <div class="fa">괜찮습니다. A안(비교안)으로 기존 업체를 유지한 채 Weplace 회수 구조(구글·홈페이지·AI검색)부터 시작하실 수 있습니다. 회수율이 눈으로 확인되면, 발견 운영까지 한 곳으로 묶는 통합 운영(B안)으로 넘어가시면 됩니다.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 12. CTA ===================== -->
+<section class="cta">
+  <div class="wrap">
+    <div class="ph r">
+      <div class="ghost">astroom</div>
+      <img src="cta.jpg" alt="아스트룸헤어" onerror="this.remove()">
+    </div>
+    <div class="kicker r">시작은, 진단부터</div>
+    <h2 class="r d1">
+      먼저 두 지점의<br>
+      현재 검색 화면을 <span class="g">진단</span>하겠습니다.
+    </h2>
+    <p class="cd r d2">
+      위례점과 문정점이 네이버 밖에서 어떻게 보이는지,
+      1장 리포트로 정리해 드리겠습니다.
+    </p>
+
+    <div class="ctacard r d2">
+      <div class="ci">진단 시 정리해 드릴 것</div>
+      <div class="cr"><span class="k">1</span> 위례·문정 네이버·구글·AI 현재 화면 점검 리스트</div>
+      <div class="cr"><span class="k">2</span> 발견 비용을 예약으로 잇는 회수 구조 설계도</div>
+      <div class="cr"><span class="k">3</span> 권장 가격안(A·B·C)과 진행 방식 안내</div>
+      <a class="ctabtn" href="#">두 지점 검색전환 진단 받기</a>
+    </div>
+    <p class="ctasub r d3">계약을 먼저 권하지 않습니다. 진단 리포트를 보시고 판단하셔도 늦지 않습니다.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">WEPLACE</div>
+  <div class="fsig">We, Place.</div>
+  <div class="fs">로컬 비즈니스 검색전환<br>대표님은 살롱을, Weplace는 구조를.</div>
+  <div class="fbiz">
+    사업자등록번호 145-88-03119<br>
+    서울특별시 금천구 디지털로 178, 1910호<br>
+    현대지식산업센터 가산퍼블릭 에이치
+  </div>
+</footer>
+
+<script>
+/* scroll reveal */
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12, rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll('.r:not(.in)').forEach(el=>io.observe(el));
+
+/* count-up numbers */
+function fmt(n,dec){ return dec ? n.toFixed(dec) : Math.round(n).toLocaleString('en-US'); }
+const numObserver = new IntersectionObserver((es)=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    const to = parseFloat(el.dataset.to);
+    const dec = parseInt(el.dataset.dec||"0");
+    const unitHTML = el.querySelector('.u') ? el.querySelector('.u').outerHTML : "";
+    const dur = 1400; const t0 = performance.now();
+    function tick(now){
+      const p = Math.min((now-t0)/dur,1);
+      const eased = 1-Math.pow(1-p,3);
+      el.innerHTML = fmt(to*eased,dec) + unitHTML;
+      if(p<1) requestAnimationFrame(tick);
+      else el.innerHTML = fmt(to,dec) + unitHTML;
+    }
+    requestAnimationFrame(tick);
+    numObserver.unobserve(el);
+  });
+},{threshold:.6});
+document.querySelectorAll('.dnum[data-to]').forEach(el=>numObserver.observe(el));
+
+/* customer-screen funnel toggle (dim / clear) */
+(function(){
+  var stages = document.getElementById('funnelStages');
+  if(!stages) return;
+  var cap = document.getElementById('funnelCap');
+  var btns = document.querySelectorAll('.funnel__switch button');
+  function setState(state){
+    var clear = (state === 'clear');
+    stages.classList.toggle('is-clear', clear);
+    if(cap) cap.classList.toggle('is-clear', clear);
+    btns.forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-state') === state ? 'true' : 'false');
+    });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){ setState(b.getAttribute('data-state')); });
+  });
+  setState('dim');
+})();
+</script>
+</body>
+</html>
