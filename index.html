@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="아스트룸헤어 송파위례점·문정점 2지점 통합 검색전환 제안 — 네이버 발견 운영부터 구글·홈페이지·AI검색까지, 발견부터 예약까지 한 곳에서. Weplace." />
+<meta name="description" content="두 매장에 쌓인 1만 건의 신뢰를 네이버 밖에서도 같은 아스트룸으로 — 송파위례점·문정점 2지점 검색전환 제안. Weplace." />
 <title>아스트룸헤어 송파위례점·문정점 — 2지점 통합 검색전환 제안 | Weplace</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -349,6 +349,29 @@ footer .fsig{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:
 footer .fs{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.85;}
 footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px solid var(--line-soft);font-size:11px;color:var(--muted);line-height:1.95;letter-spacing:.01em;}
 
+/* before/after slider (대표 사진) */
+.ba{position:relative;width:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;border:1px solid var(--line-soft);
+  box-shadow:0 30px 60px -38px rgba(58,44,32,.32);touch-action:none;user-select:none;cursor:ew-resize;background:var(--paper-2);}
+.ba__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}
+.ba__before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0);}
+.ba__handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--gold);transform:translateX(-50%);box-shadow:0 0 14px var(--gold-glow);pointer-events:none;}
+.ba__grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;
+  background:rgba(252,250,244,.92);border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold-deep);box-shadow:0 8px 20px -8px rgba(58,44,32,.4);}
+.ba__tag{position:absolute;top:13px;z-index:3;font-size:11px;letter-spacing:.05em;font-weight:600;padding:5px 12px;border-radius:20px;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);pointer-events:none;}
+.ba__tag--l{left:13px;background:rgba(58,44,32,.55);color:#F7F1E7;}
+.ba__tag--r{right:13px;background:linear-gradient(90deg,var(--gold-deep),var(--gold));color:#fff;}
+.ba__hint{margin-top:14px;text-align:center;font-size:12px;color:var(--muted);letter-spacing:.04em;}
+.baduo{display:grid;grid-template-columns:1fr;gap:24px;}
+.balabel{display:flex;align-items:center;gap:8px;font-family:"Noto Serif KR";font-weight:700;font-size:15px;color:var(--ink);margin-bottom:10px;}
+.bldot{width:7px;height:7px;border-radius:50%;display:inline-block;}
+.ba__after{filter:saturate(1.06) brightness(1.02);}
+
+/* 차별화 서비스 카드 */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.svci{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 15px;}
+.svct{font-family:"Noto Serif KR";font-weight:700;color:var(--ink);font-size:14.5px;letter-spacing:-.01em;}
+.svcd{font-size:12px;color:var(--ink-soft);margin-top:6px;line-height:1.5;}
+
 /* benefit card (3개월 이상 통합 운영 혜택) + tier perk line */
 .bonus{border-radius:20px;border:1px solid var(--gold);background:linear-gradient(165deg,#FCF4E3,#F7EDD9);
   padding:28px 24px;box-shadow:0 44px 80px -46px var(--gold-glow);}
@@ -421,8 +444,8 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
     </div>
     <div class="hero-bottom">
       <h1 class="r in d1">
-        월 300만 원으로 발견되던 두 매장을,<br>
-        이제 발견부터 예약까지 <span class="g">한 곳에서.</span>
+        두 매장에 쌓인 1만 건의 신뢰,<br>
+        아직 <span class="g">네이버 안에만</span> 있습니다.
       </h1>
       <div class="scrollcue r in d2"><span class="ln"></span> Scroll</div>
     </div>
@@ -433,15 +456,15 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <section class="anchor intro">
   <div class="wrap">
     <div class="eyebrow r">Weplace &times; Astroom</div>
-    <div class="kicker r">송파위례점 · 문정점 · 2지점 통합 검색전환</div>
+    <div class="kicker r">송파위례점 · 문정점 · 흩어지지 않은 신뢰를 한곳에</div>
     <p class="introlead r d1">
-      위례점과 문정점 — <b>같은 레이어드 전문, 다른 동네.</b><br>
-      기존 네이버 비용을 부정하지 않습니다. 그 발견이 예약과 브랜드 자산으로 이어지도록,
-      <span class="gold">네이버·구글·홈페이지·AI검색을 한 흐름으로</span> 묶습니다.
+      위례와 문정이 쌓아온 후기와 단골 — <b>이미 충분한 신뢰입니다.</b><br>
+      다만 그 신뢰가 <span class="gold">네이버 안에만</span> 있습니다. 구글에서도, AI에게 물어도
+      같은 아스트룸으로 보이도록, 흩어지지 않은 신뢰를 한곳에 모읍니다.
     </p>
     <p class="introsub r d2">
       고객은 네이버에서 발견한 뒤, 사진을 보고 리뷰를 읽고 구글에서 확인하고 AI에게 다시 묻습니다 —
-      그 모든 화면에서 ‘레이어드 전문’으로 보여야 합니다.
+      그 모든 화면에서 같은 ‘레이어드 전문’으로 보여야 합니다.
     </p>
   </div>
 </section>
@@ -451,43 +474,33 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <!-- ===================== 02. 현재 상황 ===================== -->
 <section class="anchor">
   <div class="wrap">
-    <div class="kicker r">지금, 검색에서 벌어지는 일</div>
+    <div class="kicker r">이미 쌓인 신뢰</div>
     <h2 class="r d1">
-      네이버는 이미 강합니다.<br>
-      <span class="soft">문제는 그다음입니다.</span>
+      이미 1만 건의 신뢰를 쌓았습니다.<br>
+      <span class="soft">다만, 네이버 안에만 있습니다.</span>
     </h2>
     <p class="note r d2">
-      아스트룸은 이미 네이버에서 충분히 발견되고 있습니다.
-      두 지점이 쌓아온 리뷰가 그 증거입니다 — 돈으로 하루아침에 만들 수 없는 자산입니다.
+      두 지점이 쌓아온 리뷰는 돈으로 하루아침에 만들 수 없는 자산입니다.
+      이 신뢰가 이미 ‘있다’는 것이, 모든 제안의 출발점입니다.
     </p>
 
     <div class="data r d2" style="margin-top:26px;">
       <div class="dcard">
-        <div class="dnum" data-to="1803">0</div>
-        <div class="dlb">송파위례점 방문자 리뷰</div>
-        <div class="dsrc">네이버 플레이스 기준</div>
+        <div class="dnum" data-to="4773">0</div>
+        <div class="dlb">송파위례점 리뷰</div>
+        <div class="dsrc">인기스타일 애쉬브라운 · 네이버</div>
       </div>
       <div class="dcard">
-        <div class="dnum" data-to="2971">0</div>
-        <div class="dlb">송파위례점 블로그 후기</div>
-        <div class="dsrc">누적 콘텐츠 자산</div>
-      </div>
-      <div class="dcard">
-        <div class="dnum" data-to="3550">0</div>
-        <div class="dlb">문정점 방문자 리뷰</div>
-        <div class="dsrc">★4.98 · 네이버 플레이스</div>
-      </div>
-      <div class="dcard">
-        <div class="dnum" data-to="3144">0</div>
-        <div class="dlb">문정점 블로그 후기</div>
-        <div class="dsrc">누적 콘텐츠 자산</div>
+        <div class="dnum" data-to="6692">0</div>
+        <div class="dlb">문정점 리뷰</div>
+        <div class="dsrc">★4.98 · 인기스타일 레이어드컷 · 네이버</div>
       </div>
       <div class="dcard wide">
         <div class="wi">
           <svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.8 1-5.8L3.5 9.2l5.9-.9z"/></svg>
         </div>
-        <div class="wt">두 지점 합산 방문자 리뷰 5,000건 이상, 블로그 후기 6,000건 이상.
-          <span>하루아침에 만들 수 없는 신뢰의 기록입니다.</span>
+        <div class="wt">두 지점 합산 1만 1천 건이 넘는 리뷰.
+          <span>돈으로 하루아침에 만들 수 없는 신뢰의 기록입니다.</span>
         </div>
       </div>
     </div>
@@ -499,9 +512,68 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
     </div>
 
     <p class="note r d3">
-      다만 발견 이후가 문제입니다. 구글 지도, 홈페이지, AI 검색에서 같은 전문성으로 보이지 않으면,
-      <b>발견된 고객이 예약 직전에 이탈합니다.</b> 특히 레이어드 시술은 ‘확인’을 많이 하는 시술입니다.
+      그런데 이 신뢰는 네이버 밖으로 거의 나오지 못합니다. 구글·홈페이지·AI 검색에는
+      같은 아스트룸이 정리되어 있지 않아, <b>쌓은 신뢰가 예약 직전에 새어 나갑니다.</b> 특히 레이어드 시술은 ‘확인’을 많이 하는 시술입니다.
     </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 02.5 대표 사진 (순위 너머, 첫 화면) ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="eyebrow r">First photo, first impression</div>
+    <div class="kicker r">순위 너머 · 첫 화면</div>
+    <h2 class="r d1">
+      순위는 기본입니다.<br>
+      <span class="soft">고객이 보는 건 ‘내가 가면 어떨까’입니다.</span>
+    </h2>
+    <p class="note r d2" style="margin-bottom:14px;">
+      지금까지의 마케팅은 ‘순위 유지’에 집중했습니다. 물론 중요하죠 — 다만 그건 당연한 일입니다.
+      정작 고객이 궁금한 건, <b>이 곳에 가면 나에게 어떤 시간이 펼쳐질까</b>입니다. 그 답을, 첫 사진 한 장이 합니다.
+    </p>
+    <p class="note r d2" style="margin-bottom:24px;">
+      지금 두 지점의 대표 사진은 ‘비어 있는 공간’입니다. 핸들을 끌어, 같은 자리가 어떻게 달라지는지 보세요.
+    </p>
+
+    <div class="baduo r d2">
+      <div>
+        <div class="balabel"><span class="bldot" style="background:var(--gold);"></span>송파위례점</div>
+        <div class="ba" id="ba1">
+          <img class="ba__img ba__after" src="wirye-after.jpg" alt="위례점 제안 대표 사진" onerror="this.style.display='none'">
+          <img class="ba__img ba__before" src="wirye-before.jpg" alt="위례점 현재 대표 사진" onerror="this.style.display='none'">
+          <div class="ba__handle"><div class="ba__grip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
+          <span class="ba__tag ba__tag--l">지금</span>
+          <span class="ba__tag ba__tag--r">제안</span>
+        </div>
+      </div>
+      <div>
+        <div class="balabel"><span class="bldot" style="background:var(--rose-deep);"></span>문정점</div>
+        <div class="ba" id="ba2">
+          <img class="ba__img ba__after" src="munjeong-after.jpg" alt="문정점 제안 대표 사진" onerror="this.style.display='none'">
+          <img class="ba__img ba__before" src="munjeong-before.jpg" alt="문정점 현재 대표 사진" onerror="this.style.display='none'">
+          <div class="ba__handle"><div class="ba__grip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
+          <span class="ba__tag ba__tag--l">지금</span>
+          <span class="ba__tag ba__tag--r">제안</span>
+        </div>
+      </div>
+    </div>
+    <p class="ba__hint r d3">← 핸들을 끌어 두 지점의 전·후를 비교해 보세요 →</p>
+
+    <p class="note r d3" style="margin:30px 0 14px;">첫 사진이 바꾸는 것 — 심리 셋</p>
+    <div class="qcol r d3">
+      <div class="qline">사회적 증거<span>사람이 있는 곳 = 이미 검증된 곳이라는 안심</span></div>
+      <div class="qline">자기 투영<span>그 화면에 나를 대입 → 예약까지의 거리가 줄어듦</span></div>
+      <div class="qline">온기 · 생동감<span>빈 공간의 차가움 대신, 머물고 싶은 분위기</span></div>
+    </div>
+
+    <div class="card r d3" style="margin-top:22px;">
+      <p class="small">
+        ＊ Gemini·GPT 이미지로 <b>실제 두 지점 공간에 맞춰</b> 더 따뜻하게, 그리고 손님이 앉아 있는 대표 사진을 만들어 네이버 대표 사진을 교체합니다.
+        과장이 아니라 <b>실제 분위기를 정직하게 보여주는 연출</b>이며, 가능하면 이후 실제 촬영으로 교체하는 것을 권합니다.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -519,21 +591,21 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   <div class="wrap">
     <div class="kicker r">네이버 비용을 다시 본다면</div>
     <h2 class="r d1">
-      이 비용은 낭비가 아니라,<br>
-      <span class="gold">발견 비용</span>입니다.
+      이 비용이,<br>
+      <span class="gold">그 신뢰를 만들었습니다.</span>
     </h2>
     <p class="note r d2">
       현재 두 지점 합산 월 300만 원 이상을 네이버 상위노출에 쓰고 계십니다.
-      이건 줄여야 할 비용이 아닙니다. <b>고객을 만나기 위한 입장권</b>을 이미 확보하고 계신 겁니다.
+      줄여야 할 비용이 아닙니다 — <b>1만 건의 신뢰는 이 비용이 만든 자산</b>입니다.
     </p>
 
     <div class="card r d2" style="margin-top:26px;">
       <div class="pullbox">
-        <p class="pull">네이버를 줄이자는<br>제안이 아닙니다.<br><span class="g">발견 운영과 회수 구조를<br>한 곳에서</span> 묶는 제안입니다.</p>
+        <p class="pull">네이버를 줄이자는<br>제안이 아닙니다.<br><span class="g">그 신뢰를 네이버 밖으로<br>꺼내자는</span> 제안입니다.</p>
       </div>
       <p class="small">
-        네이버 발견 운영과 구글·홈페이지·AI 검색 회수 구조를 한 창구에서 관리해,
-        <b>발견부터 예약까지 한 흐름</b>으로 잇습니다.
+        네이버 발견 운영과 구글·홈페이지·AI 검색을 한 창구에서 관리해,
+        네이버에 쌓인 신뢰가 <b>모든 화면에서 같은 아스트룸으로</b> 이어지게 합니다.
       </p>
     </div>
   </div>
@@ -624,6 +696,35 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 
     <p class="note r d3" style="margin-top:22px;">
       이제 그 근거가 <span class="gold">검색 화면에서도 보여야</span> 합니다.
+    </p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 04.5 차별화 서비스 ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="eyebrow r">More than ranking</div>
+    <div class="kicker r">상위노출, 그다음</div>
+    <h2 class="r d1">
+      미용실을 찾아 헤매던 사람도,<br>
+      <span class="soft">한 번 맞으면 단골이 됩니다.</span>
+    </h2>
+    <p class="note r d2" style="margin-bottom:22px;">
+      ‘헤어클리닉 유목민’ — 매번 새 곳에서 처음부터 설명하고, 매번 모험합니다.
+      아스트룸은 <b>시그니처 케어</b>로 그 떠돎을 끝냅니다. 상위노출은 그들을 ‘만나게’ 할 뿐,
+      <b>머물게</b> 하는 건 아스트룸의 맞춤 경험입니다.
+    </p>
+    <div class="svc r d2">
+      <div class="svci"><div class="svct">1:1 맞춤 상담</div><div class="svcd">얼굴형·모발·분위기를 읽고 제안</div></div>
+      <div class="svci"><div class="svct">시술기록 관리</div><div class="svcd">다시 와도 처음부터 설명할 필요 없이</div></div>
+      <div class="svci"><div class="svct">레이어드 전문</div><div class="svcd">컷·펌·C컬, 결과로 증명된 전문성</div></div>
+      <div class="svci"><div class="svct">프리미엄 약제</div><div class="svcd">아윤채·로레알·밀본·아모스</div></div>
+    </div>
+    <p class="note r d3" style="margin-top:22px;">
+      Weplace는 이 차별점을 <span class="gold">네이버 밖 모든 화면(구글·홈페이지·AI)에서 같은 목소리로</span> 보이게 만들어,
+      유목민이 ‘검색의 끝’에서 아스트룸을 고르게 합니다.
     </p>
   </div>
 </section>
@@ -917,12 +1018,12 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   <div class="wrap">
     <div class="kicker r">가격 이전에, 먼저 짚을 것</div>
     <h2 class="r d1" style="font-weight:400;">
-      기존 비용에 무작정 더하는 게 아니라,<br>
-      <span class="gold">나뉘어 있던 발견과 회수를 한 곳으로</span> 묶는 일입니다.
+      새로 만드는 비용이 아니라,<br>
+      <span class="gold">갇혀 있던 신뢰를 꺼내 모으는</span> 일입니다.
     </h2>
     <p class="note r d2" style="margin:22px 0 28px;">
-      기존 구조에서는 네이버 상위노출 비용은 기존 업체가 받고, 구글·홈페이지·AI검색은 따로 정리되지 않았습니다.
-      Weplace 통합 운영에서는 네이버 발견 운영과 검색전환 회수 구조를 한 곳에서 관리합니다.
+      네이버에 쌓인 신뢰는 그대로 둡니다. 다만 구글·홈페이지·AI검색에 흩어지지 않게 같은 아스트룸으로 정리해,
+      이미 가진 신뢰가 모든 화면에서 예약으로 이어지게 합니다.
     </p>
 
     <div class="shift r d2">
@@ -954,7 +1055,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   <div class="wrap pricehead">
     <h2 class="r d1" style="margin-bottom:28px;">
       <span class="soft">광고비가 아니라,</span><br>
-      발견부터 예약까지 한 곳에서 관리하는 비용입니다.
+      발견부터 예약까지, 이미 가진 신뢰를 모든 화면에 세우는 비용입니다.
     </h2>
 
     <div class="tiers">
@@ -1176,7 +1277,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
       현재 검색 화면을 <span class="g">진단</span>하겠습니다.
     </h2>
     <p class="cd r d2">
-      위례점과 문정점이 네이버 밖에서 어떻게 보이는지,
+      두 지점에 쌓인 신뢰가 네이버 밖에서 어떻게 보이는지,
       1장 리포트로 정리해 드리겠습니다.
     </p>
 
@@ -1251,6 +1352,21 @@ document.querySelectorAll('.dnum[data-to]').forEach(el=>numObserver.observe(el))
   });
   setState('dim');
 })();
+
+/* before/after sliders (대표 사진 · 위례·문정) */
+document.querySelectorAll('.ba').forEach(function(ba){
+  var dragging = false;
+  function setPos(clientX){
+    var r = ba.getBoundingClientRect();
+    var p = (clientX - r.left) / r.width * 100;
+    p = Math.max(0, Math.min(100, p));
+    ba.style.setProperty('--pos', p + '%');
+  }
+  ba.addEventListener('pointerdown', function(e){ dragging = true; try{ba.setPointerCapture(e.pointerId);}catch(_){} setPos(e.clientX); });
+  ba.addEventListener('pointermove', function(e){ if(dragging) setPos(e.clientX); });
+  ba.addEventListener('pointerup', function(){ dragging = false; });
+  ba.addEventListener('pointercancel', function(){ dragging = false; });
+});
 </script>
 </body>
 </html>
