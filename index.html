@@ -326,6 +326,26 @@ b{font-weight:600;color:var(--ink);}
 .tier li.inc::before{background:var(--rose);}
 .pricenote{margin-top:22px;font-size:12.5px;color:var(--muted);line-height:1.75;}
 
+/* ===== BLUF 두괄 요약 (상단) ===== */
+.bluf{margin-top:24px;border-radius:20px;border:1.5px solid var(--gold);background:linear-gradient(168deg,#FCF4E2,#F7EDD9);
+  padding:24px 22px;box-shadow:0 44px 84px -46px var(--gold-glow);}
+.bluf__top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.bluf__rec{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+.bluf__name{font-family:"Noto Serif KR";font-size:15px;color:var(--ink);margin-top:5px;line-height:1.4;}
+.bluf__amt{font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:600;color:var(--gold-deep);line-height:1;letter-spacing:-.01em;}
+.bluf__unit{font-size:13px;color:var(--ink-soft);}
+.bluf__sub{font-size:11.5px;color:var(--muted);margin-top:3px;}
+.bluf__alt{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line-soft);display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;color:var(--ink-soft);}
+.bluf__alt b{color:var(--ink);font-family:"Cormorant Garamond",serif;font-size:17px;font-weight:600;margin-left:3px;}
+.scope{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px;}
+.scope span{font-family:"Pretendard";font-size:12.5px;color:var(--gold-deep);background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:9px;padding:7px 13px;font-weight:600;box-shadow:0 8px 18px -16px rgba(58,44,32,.3);}
+.scope span.dim{color:var(--ink-soft);background:rgba(58,44,32,.045);font-weight:500;box-shadow:none;}
+.blufbtn{margin-top:24px;width:100%;display:block;text-align:center;background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+  color:#fff;font-family:"Pretendard";font-weight:700;font-size:15.5px;letter-spacing:.02em;padding:18px;border-radius:14px;
+  text-decoration:none;box-shadow:0 22px 44px -18px var(--gold-glow);transition:transform .25s var(--ease),box-shadow .25s var(--ease);}
+.blufbtn:hover{transform:translateY(-2px);box-shadow:0 28px 52px -18px var(--gold-glow);}
+
 /* ===== faq ===== */
 .faq details{border-bottom:1px solid var(--line-soft);}
 .faq summary{list-style:none;cursor:pointer;padding:20px 0;font-family:"Noto Serif KR";font-size:15.5px;color:var(--ink);
@@ -359,7 +379,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 
 /* before/after slider (대표 사진) */
 .ba{position:relative;width:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;border:1px solid var(--line-soft);
-  box-shadow:0 30px 60px -38px rgba(58,44,32,.32);touch-action:none;user-select:none;cursor:ew-resize;background:var(--paper-2);}
+  box-shadow:0 30px 60px -38px rgba(58,44,32,.32);user-select:none;cursor:default;--pos:100%;background:var(--paper-2);}
 .ba__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}
 .ba__before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0);}
 .ba__handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--gold);transform:translateX(-50%);box-shadow:0 0 14px var(--gold-glow);pointer-events:none;}
@@ -460,6 +480,110 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   </div>
 </section>
 
+<div class="hr"></div>
+
+<!-- ===================== 01.6 순위 너머 첫 화면 (상단 이동 · 스크롤 슬라이더) ===================== -->
+<section class="anchor">
+  <div class="wrap">
+    <div class="eyebrow r">First photo, first impression</div>
+    <div class="kicker r">순위 너머 · 첫 화면</div>
+    <h2 class="r d1">
+      순위는 기본입니다.<br>
+      <span class="soft">고객이 보는 건 ‘내가 가면 어떨까’입니다.</span>
+    </h2>
+    <p class="note r d2" style="margin-bottom:14px;">
+      지금까지의 마케팅은 ‘순위 유지’에 집중했습니다. 물론 중요하죠 — 다만 그건 당연한 일입니다.
+      정작 고객이 궁금한 건, <b>이 곳에 가면 나에게 어떤 시간이 펼쳐질까</b>입니다. 그 답을, 첫 사진 한 장이 합니다.
+    </p>
+    <p class="note r d2" style="margin-bottom:24px;">
+      지금 두 지점의 대표 사진은 ‘비어 있는 공간’입니다. <b>스크롤하면</b>, 같은 자리가 어떻게 달라지는지 그대로 보입니다.
+    </p>
+
+    <div class="baduo r d2">
+      <div>
+        <div class="balabel"><span class="bldot" style="background:var(--gold);"></span>송파위례점</div>
+        <div class="ba" id="ba1">
+          <img class="ba__img ba__after" src="wirye-after.jpg" alt="위례점 제안 대표 사진" onerror="this.style.display='none'">
+          <img class="ba__img ba__before" src="wirye-before.jpg" alt="위례점 현재 대표 사진" onerror="this.style.display='none'">
+          <div class="ba__handle"><div class="ba__grip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 9l7 7 7-7"/></svg></div></div>
+          <span class="ba__tag ba__tag--l">지금</span>
+          <span class="ba__tag ba__tag--r">제안</span>
+        </div>
+      </div>
+      <div>
+        <div class="balabel"><span class="bldot" style="background:var(--rose-deep);"></span>문정점</div>
+        <div class="ba" id="ba2">
+          <img class="ba__img ba__after" src="munjeong-after.jpg" alt="문정점 제안 대표 사진" onerror="this.style.display='none'">
+          <img class="ba__img ba__before" src="munjeong-before.jpg" alt="문정점 현재 대표 사진" onerror="this.style.display='none'">
+          <div class="ba__handle"><div class="ba__grip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 9l7 7 7-7"/></svg></div></div>
+          <span class="ba__tag ba__tag--l">지금</span>
+          <span class="ba__tag ba__tag--r">제안</span>
+        </div>
+      </div>
+    </div>
+    <p class="ba__hint r d3">스크롤하면 — 비어 있던 ‘지금’이 ‘제안’으로 채워집니다 ↓</p>
+
+    <p class="note r d3" style="margin:30px 0 14px;">첫 사진이 바꾸는 것 — 심리 셋</p>
+    <div class="qcol r d3">
+      <div class="qline">사회적 증거<span>사람이 있는 곳 = 이미 검증된 곳이라는 안심</span></div>
+      <div class="qline">자기 투영<span>그 화면에 나를 대입 → 예약까지의 거리가 줄어듦</span></div>
+      <div class="qline">온기 · 생동감<span>빈 공간의 차가움 대신, 머물고 싶은 분위기</span></div>
+    </div>
+
+    <div class="card r d3" style="margin-top:22px;">
+      <p class="small">
+        ＊ <b>실제 두 지점 공간에 맞춰</b> 더 따뜻하게, 손님이 앉아 있는 대표 사진으로 네이버 대표 사진을 교체합니다.
+        과장이 아니라 <b>실제 분위기를 정직하게 보여주는 연출</b>이며, 가능하면 이후 실제 촬영으로 교체하는 것을 권합니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<!-- ===================== 01.7 두괄 요약 · 가격/작업 (NEW) ===================== -->
+<section class="anchor" style="padding:70px 0;">
+  <div class="wrap">
+    <div class="kicker r">결론부터 — 무엇을, 얼마에</div>
+    <h2 class="r d1">
+      네이버는 그대로 두고,<br>
+      <span class="gold">발견부터 예약까지 한 창구로.</span>
+    </h2>
+
+    <div class="bluf r d2">
+      <div class="bluf__top">
+        <div>
+          <div class="bluf__rec">추천 · B안</div>
+          <div class="bluf__name">2지점 통합 검색전환 OS</div>
+        </div>
+        <div style="text-align:right;">
+          <div><span class="bluf__amt">450</span><span class="bluf__unit"> 만 원/월 · 2지점</span></div>
+          <div class="bluf__sub">+ VAT · 지점당 환산 225</div>
+        </div>
+      </div>
+      <div class="bluf__alt">
+        <span>비교 A ·<b>480</b></span>
+        <span>확장 C ·<b>600</b></span>
+        <span>위례 GEO 풀 ·<b>＋50</b></span>
+      </div>
+    </div>
+
+    <div class="scope r d2">
+      <span>네이버 고급 운영</span>
+      <span>문정 글로벌 발견 · 외국인</span>
+      <span>위례 구글 기본</span>
+      <span>카카오 예약 동선</span>
+      <span>구글·AI 재확인</span>
+      <span class="dim">브랜드·지점 페이지</span>
+      <span class="dim">2지점 월간 리포트</span>
+      <span class="dim">회수율 점검</span>
+    </div>
+
+    <a class="blufbtn r d3" href="#plan">상세 플랜 · 작업 내역 보기 ↓</a>
+    <p class="r d3" style="text-align:center;margin-top:12px;font-size:12px;color:var(--muted);">아래는 ‘왜 이 구조인지’ — 1만 건 신뢰부터 차근히.</p>
+  </div>
+</section>
+
 <!-- ===================== 01.5 INTRO (텍스트 분산 슬롯) ===================== -->
 <section class="anchor intro">
   <div class="wrap">
@@ -523,65 +647,6 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
       그런데 이 신뢰는 네이버 밖으로 거의 나오지 못합니다. 구글·홈페이지·AI 검색에는
       같은 아스트룸이 정리되어 있지 않아, <b>쌓은 신뢰가 예약 직전에 새어 나갑니다.</b> 특히 레이어드 시술은 ‘확인’을 많이 하는 시술입니다.
     </p>
-  </div>
-</section>
-
-<div class="hr"></div>
-
-<!-- ===================== 02.5 대표 사진 (순위 너머, 첫 화면) ===================== -->
-<section class="anchor">
-  <div class="wrap">
-    <div class="eyebrow r">First photo, first impression</div>
-    <div class="kicker r">순위 너머 · 첫 화면</div>
-    <h2 class="r d1">
-      순위는 기본입니다.<br>
-      <span class="soft">고객이 보는 건 ‘내가 가면 어떨까’입니다.</span>
-    </h2>
-    <p class="note r d2" style="margin-bottom:14px;">
-      지금까지의 마케팅은 ‘순위 유지’에 집중했습니다. 물론 중요하죠 — 다만 그건 당연한 일입니다.
-      정작 고객이 궁금한 건, <b>이 곳에 가면 나에게 어떤 시간이 펼쳐질까</b>입니다. 그 답을, 첫 사진 한 장이 합니다.
-    </p>
-    <p class="note r d2" style="margin-bottom:24px;">
-      지금 두 지점의 대표 사진은 ‘비어 있는 공간’입니다. 핸들을 끌어, 같은 자리가 어떻게 달라지는지 보세요.
-    </p>
-
-    <div class="baduo r d2">
-      <div>
-        <div class="balabel"><span class="bldot" style="background:var(--gold);"></span>송파위례점</div>
-        <div class="ba" id="ba1">
-          <img class="ba__img ba__after" src="wirye-after.jpg" alt="위례점 제안 대표 사진" onerror="this.style.display='none'">
-          <img class="ba__img ba__before" src="wirye-before.jpg" alt="위례점 현재 대표 사진" onerror="this.style.display='none'">
-          <div class="ba__handle"><div class="ba__grip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
-          <span class="ba__tag ba__tag--l">지금</span>
-          <span class="ba__tag ba__tag--r">제안</span>
-        </div>
-      </div>
-      <div>
-        <div class="balabel"><span class="bldot" style="background:var(--rose-deep);"></span>문정점</div>
-        <div class="ba" id="ba2">
-          <img class="ba__img ba__after" src="munjeong-after.jpg" alt="문정점 제안 대표 사진" onerror="this.style.display='none'">
-          <img class="ba__img ba__before" src="munjeong-before.jpg" alt="문정점 현재 대표 사진" onerror="this.style.display='none'">
-          <div class="ba__handle"><div class="ba__grip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></div></div>
-          <span class="ba__tag ba__tag--l">지금</span>
-          <span class="ba__tag ba__tag--r">제안</span>
-        </div>
-      </div>
-    </div>
-    <p class="ba__hint r d3">← 핸들을 끌어 두 지점의 전·후를 비교해 보세요 →</p>
-
-    <p class="note r d3" style="margin:30px 0 14px;">첫 사진이 바꾸는 것 — 심리 셋</p>
-    <div class="qcol r d3">
-      <div class="qline">사회적 증거<span>사람이 있는 곳 = 이미 검증된 곳이라는 안심</span></div>
-      <div class="qline">자기 투영<span>그 화면에 나를 대입 → 예약까지의 거리가 줄어듦</span></div>
-      <div class="qline">온기 · 생동감<span>빈 공간의 차가움 대신, 머물고 싶은 분위기</span></div>
-    </div>
-
-    <div class="card r d3" style="margin-top:22px;">
-      <p class="small">
-        ＊ Gemini·GPT 이미지로 <b>실제 두 지점 공간에 맞춰</b> 더 따뜻하게, 그리고 손님이 앉아 있는 대표 사진을 만들어 네이버 대표 사진을 교체합니다.
-        과장이 아니라 <b>실제 분위기를 정직하게 보여주는 연출</b>이며, 가능하면 이후 실제 촬영으로 교체하는 것을 권합니다.
-      </p>
-    </div>
   </div>
 </section>
 
@@ -930,7 +995,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
       </div>
       <div class="dcard">
         <div class="dnum" data-to="2162">0<span class="u">만</span></div>
-        <div class="dlb">ChatGPT 국내 월간 사용자</div>
+        <div class="dlb">생성형 AI 국내 월간 사용자</div>
         <div class="dsrc">스마트폰 이용자 약 40% · 와이즈앱 2025.11</div>
       </div>
       <div class="dcard">
@@ -942,7 +1007,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
         <div class="wi">
           <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg>
         </div>
-        <div class="wt">한국인 절반(50.9%)이 이미 ChatGPT를 써봤습니다.
+        <div class="wt">한국인 절반(50.9%)이 이미 생성형 AI를 써봤습니다.
           <span>2030 여성과 법조타운 직장인이 두터운 송파·문정에서, ‘발견 이후’ 화면은 더 중요해집니다.</span>
         </div>
       </div>
@@ -1119,7 +1184,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 </section>
 
 <!-- ===================== 10. 가격 카드 ===================== -->
-<section class="anchor" style="padding-top:24px;">
+<section class="anchor" id="plan" style="padding-top:24px;scroll-margin-top:20px;">
   <div class="wrap pricehead">
     <h2 class="r d1" style="margin-bottom:28px;">
       <span class="soft">광고비가 아니라,</span><br>
@@ -1434,20 +1499,27 @@ document.querySelectorAll('.dnum[data-to]').forEach(el=>numObserver.observe(el))
   setState('dim');
 })();
 
-/* before/after sliders (대표 사진 · 위례·문정) */
-document.querySelectorAll('.ba').forEach(function(ba){
-  var dragging = false;
-  function setPos(clientX){
-    var r = ba.getBoundingClientRect();
-    var p = (clientX - r.left) / r.width * 100;
-    p = Math.max(0, Math.min(100, p));
-    ba.style.setProperty('--pos', p + '%');
+/* 순위너머 슬라이더 — 스크롤 스크럽 (지점별 개별 · 지금 → 제안) */
+(function(){
+  var bas = document.querySelectorAll('.baduo .ba');
+  if(!bas.length) return;
+  var ticking = false;
+  function update(){
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    bas.forEach(function(ba){
+      var r = ba.getBoundingClientRect();
+      /* 이미지가 하단(0.85vh)에 들어오면 '지금'(100%), 중앙 위(0.30vh)면 '제안'(0%) */
+      var p = (vh * 0.85 - r.top) / (vh * 0.55);
+      p = Math.max(0, Math.min(1, p));
+      ba.style.setProperty('--pos', ((1 - p) * 100).toFixed(1) + '%');
+    });
+    ticking = false;
   }
-  ba.addEventListener('pointerdown', function(e){ dragging = true; try{ba.setPointerCapture(e.pointerId);}catch(_){} setPos(e.clientX); });
-  ba.addEventListener('pointermove', function(e){ if(dragging) setPos(e.clientX); });
-  ba.addEventListener('pointerup', function(){ dragging = false; });
-  ba.addEventListener('pointercancel', function(){ dragging = false; });
-});
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  update();
+})();
 </script>
 </body>
 </html>
