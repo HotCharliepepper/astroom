@@ -454,6 +454,18 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   border:1px solid var(--line-soft);border-radius:8px;padding:5px 11px;margin:9px 6px 0 0;letter-spacing:.01em;}
 .ctag.opt{color:var(--ink-soft);background:rgba(58,44,32,.05);}
 
+/* ===== 감정 파동 · 밝은 살롱 변환 (color = emotion) ===== */
+section[data-emotion]{position:relative;isolation:isolate;}
+section[data-emotion]::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;transition:opacity .6s var(--ease);}
+section[data-emotion="good"]{padding-top:96px;padding-bottom:96px;}
+section[data-emotion="good"]::after{background:radial-gradient(120% 88% at 50% 28%, rgba(200,167,101,.11), transparent 60%);}
+section[data-emotion="bad"]{padding-top:60px;padding-bottom:60px;}
+section[data-emotion="bad"]::after{background:linear-gradient(180deg, rgba(116,116,126,.11), rgba(92,92,102,.05));}
+section[data-emotion="bad"] h2{letter-spacing:-.03em;}
+section[data-emotion="open"]{padding-top:118px;padding-bottom:118px;}
+section[data-emotion="open"]::after{background:linear-gradient(180deg, rgba(78,61,45,.05), rgba(58,44,32,.13) 76%, rgba(58,44,32,.19));}
+section[data-emotion="action"]::after{background:radial-gradient(120% 90% at 50% 60%, rgba(176,134,60,.12), transparent 58%);}
+
 @media (min-width:640px){
   .hero h1{font-size:40px;}
   .anchor h2{font-size:30px;}
@@ -472,7 +484,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
     </div>
     <div class="hero-bottom">
       <h1 class="r in d1">
-        두 매장에 쌓인 1만 건의 신뢰,<br>
+        두 매장 후기 1만 개,<br>
         아직 <span class="g">네이버 안에만</span> 있습니다.
       </h1>
       <div class="scrollcue r in d2"><span class="ln"></span> Scroll</div>
@@ -542,7 +554,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <div class="hr"></div>
 
 <!-- ===================== 01.7 두괄 요약 · 가격/작업 (NEW) ===================== -->
-<section class="anchor" style="padding:70px 0;">
+<section class="anchor" data-emotion="action" style="padding:70px 0;">
   <div class="wrap">
     <div class="kicker r">결론부터 — 무엇을, 얼마에</div>
     <h2 class="r d1">
@@ -590,13 +602,11 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
     <div class="eyebrow r">Weplace &times; Astrum Hair</div>
     <div class="kicker r">송파위례점 · 문정점 · 흩어지지 않은 신뢰를 한곳에</div>
     <p class="introlead r d1">
-      위례와 문정이 쌓아온 후기와 단골 — <b>이미 충분한 신뢰입니다.</b><br>
-      다만 그 신뢰가 <span class="gold">네이버 안에만</span> 있습니다. 구글에서도, AI에게 물어도
-      같은 아스트룸으로 보이도록, 흩어지지 않은 신뢰를 한곳에 모읍니다.
+      위례와 문정이 쌓은 후기와 단골 — <b>이미 충분한 신뢰입니다.</b><br>
+      다만 그 신뢰가 <span class="gold">네이버 안에만</span> 있습니다.
     </p>
     <p class="introsub r d2">
-      고객은 네이버에서 발견한 뒤, 사진을 보고 리뷰를 읽고 구글에서 확인하고 AI에게 다시 묻습니다 —
-      그 모든 화면에서 같은 ‘레이어드 전문’으로 보여야 합니다.
+      구글에서도, AI에게 물어도 같은 아스트룸으로 — 흩어진 신뢰를 한곳에 모읍니다.
     </p>
   </div>
 </section>
@@ -608,12 +618,11 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   <div class="wrap">
     <div class="kicker r">이미 쌓인 신뢰</div>
     <h2 class="r d1">
-      이미 1만 건의 신뢰를 쌓았습니다.<br>
-      <span class="soft">다만, 네이버 안에만 있습니다.</span>
+      후기 1만 개, 이미 있습니다.<br>
+      <span class="soft">그런데 네이버 안에만 있습니다.</span>
     </h2>
     <p class="note r d2">
-      두 지점이 쌓아온 리뷰는 돈으로 하루아침에 만들 수 없는 자산입니다.
-      이 신뢰가 이미 ‘있다’는 것이, 모든 제안의 출발점입니다.
+      두 매장 후기는 하루아침에 못 만듭니다. 이게 이미 있다는 게, 모든 것의 시작점입니다.
     </p>
 
     <div class="data r d2" style="margin-top:26px;">
@@ -654,8 +663,8 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 
 <!-- ===================== BAND ===================== -->
 <section class="band band-style">
-  <p class="bq">발견된 고객은, 예약 전에 네 번 더 확인합니다.
-    <span class="sm">사진 · 리뷰 · 구글 · AI — 그 모든 화면에서 같은 ‘레이어드 전문’으로.</span>
+  <p class="bq">손님은 예약 전에, 네 번 더 봅니다.
+    <span class="sm">사진 · 리뷰 · 구글 · AI — 어디서 봐도 같은 ‘레이어드 전문’으로.</span>
   </p>
 </section>
 
@@ -664,12 +673,11 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   <div class="wrap">
     <div class="kicker r">네이버 비용을 다시 본다면</div>
     <h2 class="r d1">
-      이 비용이,<br>
-      <span class="gold">그 신뢰를 만들었습니다.</span>
+      이 돈이,<br>
+      <span class="gold">그 후기를 만들었습니다.</span>
     </h2>
     <p class="note r d2">
-      현재 두 지점 합산 월 300만 원 이상을 네이버 상위노출에 쓰고 계십니다.
-      줄여야 할 비용이 아닙니다 — <b>1만 건의 신뢰는 이 비용이 만든 자산</b>입니다.
+      지금 네이버에 두 매장 월 300만 원, 쓰고 계시죠. 줄이라는 거 아닙니다 — <b>후기 1만 개가 이 돈으로 쌓였습니다.</b>
     </p>
 
     <div class="card r d2" style="margin-top:26px;">
@@ -688,16 +696,15 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <div class="hr"></div>
 
 <!-- ===================== 04. 고객 불안 ===================== -->
-<section class="anchor">
+<section class="anchor" data-emotion="open">
   <div class="wrap">
     <div class="kicker r">고객의 머릿속</div>
     <h2 class="r d1">
-      고객은 미용실을 찾는 게 아니라,<br>
-      <span class="rose">실패하지 않을 근거</span>를 찾습니다.
+      손님은 미용실을 고르는 게 아닙니다.<br>
+      <span class="rose">‘안 망할 곳’</span>을 찾습니다.
     </h2>
     <p class="note r d2" style="margin-bottom:30px;">
-      레이어드펌·C컬펌은 결과 실패에 대한 불안이 큰 시술입니다.
-      예약 버튼을 누르기 전, 고객의 질문은 거의 정해져 있습니다.
+      펌·C컬은 ‘망하면 어쩌지’가 큰 시술입니다. 예약 누르기 전, 손님 머릿속은 거의 정해져 있습니다.
     </p>
 
     <div class="qcol r d2">
@@ -777,12 +784,12 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <div class="hr"></div>
 
 <!-- ===================== 04.5 차별화 서비스 ===================== -->
-<section class="anchor">
+<section class="anchor" data-emotion="good">
   <div class="wrap">
     <div class="eyebrow r">More than ranking</div>
     <div class="kicker r">상위노출, 그다음</div>
     <h2 class="r d1">
-      미용실을 찾아 헤매던 사람도,<br>
+      여기저기 헤매던 손님도,<br>
       <span class="soft">한 번 맞으면 단골이 됩니다.</span>
     </h2>
     <p class="note r d2" style="margin-bottom:22px;">
@@ -863,12 +870,11 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
   <div class="wrap">
     <div class="kicker r">고객의 동선</div>
     <h2 class="r d1">
-      발견하고, 확인하고,<br>
-      비교한 뒤 예약합니다.
+      보고, 또 확인하고,<br>
+      그 다음에 예약합니다.
     </h2>
     <p class="note r d2" style="margin-bottom:34px;">
-      네이버는 발견의 출발점입니다. 다만 확신이 안 선 고객은 구글에서 다시 확인하고,
-      요즘은 AI에게 한 번 더 묻습니다.
+      네이버는 발견의 출발점입니다. 확신이 안 선 고객은 구글에서 다시 보고, AI에게 한 번 더 묻습니다.
     </p>
 
     <div class="flow r d2">
@@ -922,8 +928,8 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
     </div>
     <div class="kicker r">고객은 이제, AI에게도 묻습니다</div>
     <h2 class="r d1">
-      AI는 감으로 추천하지 않습니다.<br>
-      <span class="soft">정리된 매장을 읽습니다.</span>
+      AI는 그냥 추천 안 합니다.<br>
+      <span class="soft">‘잘 정리된 곳’을 읽습니다.</span>
     </h2>
     <p class="note r d2" style="margin-bottom:24px;">
       30·40대 고객도 이제 ‘잘하는 곳’을 AI에게 먼저 물어봅니다. 예를 들면 —
@@ -970,16 +976,16 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <div class="hr"></div>
 
 <!-- ===================== 07.5 송파 상권 · 검색 데이터 ===================== -->
-<section class="anchor">
+<section class="anchor" data-emotion="bad">
   <div class="wrap">
     <div class="eyebrow r">Why here, why now</div>
     <div class="kicker r">송파 상권 · 검색 환경</div>
     <h2 class="r d1">
-      이 동네 고객은,<br>
-      <span class="soft">이미 구글과 AI로 다시 확인합니다.</span>
+      이 동네 손님도,<br>
+      <span class="soft">벌써 구글·AI로 다시 봅니다.</span>
     </h2>
     <p class="note r d2" style="margin-bottom:26px;">
-      송파는 거주 인구도, 오가는 인구도 큰 생활권입니다. 그리고 그 인구가 검색하는 방식이 빠르게 바뀌고 있습니다.
+      송파는 거주·유동 인구가 큰 생활권입니다. 그 인구의 검색 방식이 빠르게 바뀌고 있습니다.
     </p>
 
     <div class="data r d2">
@@ -1028,8 +1034,8 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
     <div class="eyebrow r">Same brand, different reach</div>
     <div class="kicker r">두 지점, 어떻게 다르게</div>
     <h2 class="r d1">
-      구글과 AI는 ‘외국인 채널’이 아니라,<br>
-      <span class="soft">예약 전에 다시 확인하는 화면입니다.</span>
+      구글·AI, 외국인만 보는 거 아닙니다.<br>
+      <span class="soft">‘예약 전에 다시 보는 화면’입니다.</span>
     </h2>
     <p class="note r d2" style="margin-bottom:14px;">
       흔한 오해가 하나 있습니다 — “구글은 외국인 보라고 하는 것 아니냐”는 것입니다.
@@ -1082,7 +1088,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <div class="hr"></div>
 
 <!-- ===================== 08. 90일 로드맵 ===================== -->
-<section class="anchor">
+<section class="anchor" data-emotion="good">
   <div class="wrap">
     <div class="kicker r">90일 로드맵</div>
     <h2 class="r d1">진단부터, 월간 운영까지.</h2>
@@ -1124,7 +1130,7 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
             <li>네이버·구글·홈페이지 정보 일치</li>
             <li>스타일별 콘텐츠 설계 · AI 화면 점검</li>
             <li>리뷰 유도 문구 개선</li>
-            <li>상권 연계 콘텐츠 · CTA 개선</li>
+            <li>상권 연계 콘텐츠 · 예약 버튼 개선</li>
           </ul>
         </div>
       </div>
@@ -1146,17 +1152,58 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 
 <div class="hr"></div>
 
+<!-- ===================== 08.5 홈페이지 필수 · 채용까지 (NEW) ===================== -->
+<section class="anchor" data-emotion="good">
+  <div class="wrap">
+    <div class="eyebrow r">Beyond customers</div>
+    <div class="kicker r">홈페이지가 왜 필수인가</div>
+    <h2 class="r d1">
+      정리된 검색 화면 —<br>
+      <span class="gold">손님만 보는 게 아닙니다.</span>
+    </h2>
+    <p class="note r d2">
+      홈페이지는 네이버·구글·AI가 함께 읽는 <b>공식 기준점</b>입니다. 이게 없으면 두 지점은 화면마다 흩어져 보입니다.
+    </p>
+    <p class="note r d2" style="margin-bottom:30px;">
+      그리고 이 화면을 <b>한 사람이 더</b> 봅니다 — <span class="gold">들어올 디자이너</span>입니다.
+    </p>
+
+    <div class="flow r d2">
+      <div class="fstep">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><path d="M4 9l8-5 8 5v9a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M9 20v-6h6v6"/></svg></div><div class="fconn"></div></div>
+        <div class="fbody"><div class="lb">Base</div><div class="ti">정리된 홈페이지 · 또렷한 검색</div><div class="de">구글·AI가 같은 아스트룸으로 읽는다.</div></div>
+      </div>
+      <div class="fstep">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c0-3 2.7-5 5.5-5s5.5 2 5.5 5"/><circle cx="17.5" cy="9" r="2.1"/></svg></div><div class="fconn"></div></div>
+        <div class="fbody"><div class="lb">Trust</div><div class="ti">손님도, 디자이너도 안심</div><div class="de">‘여기 괜찮은 곳이네’를 양쪽이 같이 느낀다.</div></div>
+      </div>
+      <div class="fstep last">
+        <div class="frail"><div class="fnode"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></div></div>
+        <div class="fbody"><div class="lb">Result</div><div class="ti">채용·브랜딩이 수월해진다</div><div class="de">좋은 디자이너가 먼저 안심하고 지원한다.</div></div>
+      </div>
+    </div>
+
+    <div class="card r d3" style="margin-top:26px;">
+      <p class="lead">
+        요즘 디자이너도 입사 전 그 살롱을 검색합니다.<br>
+        <span class="gold">손님을 모으는 화면이, 그대로 사람을 모으는 화면이 됩니다.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
 <!-- ===================== 09. 가격 리프레임 ===================== -->
 <section class="anchor">
   <div class="wrap">
     <div class="kicker r">가격 이전에, 먼저 짚을 것</div>
     <h2 class="r d1" style="font-weight:400;">
-      새로 만드는 비용이 아니라,<br>
-      <span class="gold">갇혀 있던 신뢰를 꺼내 모으는</span> 일입니다.
+      새 돈 쓰는 게 아닙니다.<br>
+      <span class="gold">갇힌 후기를 꺼내는</span> 일입니다.
     </h2>
     <p class="note r d2" style="margin:22px 0 28px;">
-      네이버에 쌓인 신뢰는 그대로 둡니다. 다만 구글·홈페이지·AI검색에 흩어지지 않게 같은 아스트룸으로 정리해,
-      이미 가진 신뢰가 모든 화면에서 예약으로 이어지게 합니다.
+      네이버는 그대로 둡니다. 구글·AI·홈페이지를 같은 아스트룸으로 정리해, 어디서 봐도 예약으로 이어지게 합니다.
     </p>
 
     <div class="shift r d2">
@@ -1187,8 +1234,8 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <section class="anchor" id="plan" style="padding-top:24px;scroll-margin-top:20px;">
   <div class="wrap pricehead">
     <h2 class="r d1" style="margin-bottom:28px;">
-      <span class="soft">광고비가 아니라,</span><br>
-      발견부터 예약까지, 이미 가진 신뢰를 모든 화면에 세우는 비용입니다.
+      <span class="soft">새 광고비가 아닙니다.</span><br>
+      ‘어디서 봐도 같은 곳’으로 만드는 값입니다.
     </h2>
 
     <div class="tiers">
@@ -1421,37 +1468,36 @@ footer .fbiz{max-width:360px;margin:22px auto 0;padding-top:18px;border-top:1px 
 <div class="hr"></div>
 
 <!-- ===================== 12. CTA ===================== -->
-<section class="cta">
+<section class="cta" data-emotion="action">
   <div class="wrap">
     <div class="ph r">
       <div class="ghost">astrum hair</div>
       <img src="cta.jpg" alt="아스트룸헤어" onerror="this.remove()">
     </div>
-    <div class="kicker r">시작은, 진단부터</div>
+    <div class="kicker r">마지막으로</div>
     <h2 class="r d1">
-      먼저 두 지점의<br>
-      현재 검색 화면을 <span class="g">진단</span>하겠습니다.
+      이미 다 갖고 계십니다.<br>
+      <span class="g">이제 모든 화면에 세우면 됩니다.</span>
     </h2>
     <p class="cd r d2">
-      두 지점에 쌓인 신뢰가 네이버 밖에서 어떻게 보이는지,
-      1장 리포트로 정리해 드리겠습니다.
+      복잡한 거 안 합니다. 먼저 두 매장이 지금 구글·AI에서 어떻게 보이는지, <b>무료로</b> 정리해 드리겠습니다.
     </p>
 
     <div class="ctacard r d2">
-      <div class="ci">진단 시 정리해 드릴 것</div>
-      <div class="cr"><span class="k">1</span> 위례·문정 네이버·구글·AI·카카오 현재 화면 점검 (문정 외국인 발견 포함)</div>
-      <div class="cr"><span class="k">2</span> 발견 비용을 예약으로 잇는 회수 구조 설계도</div>
-      <div class="cr"><span class="k">3</span> 권장 가격안(A·B·C)과 진행 방식 안내</div>
-      <a class="ctabtn" href="#">두 지점 검색전환 진단 받기</a>
+      <div class="ci">이렇게 시작합니다</div>
+      <div class="cr"><span class="k">1</span> 위례·문정 지금 화면 점검 (네이버·구글·AI·카카오)</div>
+      <div class="cr"><span class="k">2</span> 어디서 새는지, 어떻게 막을지</div>
+      <div class="cr"><span class="k">3</span> 가벼운 시작(월 100)부터 추천안까지</div>
+      <div style="margin-top:14px;background:var(--rose-bg);border:1px solid var(--line-soft);border-radius:11px;padding:11px 13px;font-size:13px;color:var(--gold-deep);line-height:1.55;">부담되면 <b>구글부터, 월 100</b>. 네이버는 그대로 두셔도 됩니다.</div>
+      <a class="ctabtn" href="#">무료로 화면 점검받기</a>
     </div>
-    <p class="ctasub r d3">계약을 먼저 권하지 않습니다. 진단 리포트를 보시고 판단하셔도 늦지 않습니다.</p>
+    <p class="ctasub r d3">보시고 천천히 정하셔도 됩니다. 가벼운 것부터, 같이 시작하시죠.</p>
   </div>
 </section>
 
 <footer>
-  <div class="fb">WEPLACE</div>
   <div class="fsig">We, Place.</div>
-  <div class="fs">로컬 비즈니스 검색전환<br>대표님은 살롱을, Weplace는 구조를.</div>
+  <div class="fs">살롱은 대표님 몫,<br>그 다음 화면은 우리 몫.</div>
   <div class="fbiz">
     사업자등록번호 145-88-03119<br>
     서울특별시 금천구 디지털로 178, 1910호<br>
